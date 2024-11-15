@@ -4,17 +4,34 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
   }
 }
 
+@layer base {
+  :root {
+    --content-width: 640px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 body {
+  line-height: 1.5;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
