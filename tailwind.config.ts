@@ -8,10 +8,7 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["var(--font-inter)"],
-        mono: ["var(--font-roboto-mono)"],
-      },
+      fontFamily: {},
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
