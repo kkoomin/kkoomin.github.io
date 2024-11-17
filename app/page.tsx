@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { Inter } from "next/font/google";
-import Footer from "../components/footer/Footer";
+// import { Inter } from "next/font/google";
+// import Footer from "../components/footer/Footer";
 import { LinkedInIcon, NotionIcon } from "@/components/icons";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
