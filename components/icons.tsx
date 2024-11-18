@@ -44,23 +44,57 @@ export function LinkedInIcon() {
   );
 }
 
-export function ArrowIcon() {
+export function ArrowUpRight() {
   return (
     <svg
-      color="#4B5563"
-      xmlns="http://www.w3.org/2000/svg"
       width="1rem"
       height="1rem"
-      viewBox="0 0 24 24"
+      viewBox="-2.4 -2.4 28.80 28.80"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      stroke="#4B5563"
+      strokeWidth="1"
+      strokeLinecap="round"
+      strokeLinejoin="miter"
+      transform="rotate(0)matrix(-1, 0, 0, 1, 0, 0)"
     >
-      <path
-        fill="none"
-        stroke="currentColor"
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="1.5"
-        d="M6 18L18 6m0 0H9m9 0v9"
-      />
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <polyline points="14 7 7 7 7 14"></polyline>
+        <line x1="7" y1="7" x2="17" y2="17"></line>
+      </g>
+    </svg>
+  );
+}
+
+export function ArrowUpLeft() {
+  return (
+    <svg
+      width="1rem"
+      height="1rem"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      stroke="#4B5563"
+      strokeWidth="1"
+      strokeLinecap="round"
+      strokeLinejoin="miter"
+      transform="rotate(0)matrix(1, 0, 0, 1, 0, 0)"
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <polyline points="14 7 7 7 7 14"></polyline>
+        <line x1="7" y1="7" x2="17" y2="17"></line>
+      </g>
     </svg>
   );
 }

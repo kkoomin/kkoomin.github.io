@@ -57,11 +57,8 @@ export default function Home() {
           </Link>
         </div>
         <div className="basis-1/2 flex-col gap-7">
-          <div className="text-black font-bold">
-            Note
-            {/* <Link href="/note">Note</Link> */}
-          </div>
-          <div>no contents</div>
+          <div className="text-black font-bold">Note</div>
+          <Link href="/note">no contents</Link>
         </div>
       </div>
     </section>

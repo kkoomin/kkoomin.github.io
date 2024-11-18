@@ -44,6 +44,11 @@ body {
   font-family: "Arita Buri";
 }
 
+h1,
+h2 {
+  @apply font-bold;
+}
+
 .internal-link,
 .external-link {
   @apply underline decoration-1 underline-offset-4 hover:decoration-transparent;
