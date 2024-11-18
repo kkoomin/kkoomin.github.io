@@ -3,8 +3,8 @@ import Link from "next/link";
 export default function About() {
   return (
     <>
-      <Link href="/">Index</Link>
       <section>
+        <Link href="/">Index</Link>
         <h1>About Me</h1>
         {/* Name */}
         <div>Minha Koo</div>

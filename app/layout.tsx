@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
+// import { Inter } from "next/font/google";
+// import Footer from "../components/footer/Footer";
+
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
@@ -16,7 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`min-h-screen`}>
+        <div className="blur h-24"></div>
+        <main
+          className={`container  p-8 max-w-screen-sm mx-auto text-gray-600`}
+        >
+          {children}
+        </main>
+        {/* <Footer /> */}
+      </body>
     </html>
   );
 }
