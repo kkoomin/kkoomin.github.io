@@ -9,6 +9,9 @@ export default function AllNotes() {
         <Link href="/">Index</Link>
       </div>
       <div className="flex flex-col gap-4">🚧 Still working on it 🚧</div>
+      <div>
+        <Link href="/note/1">Test</Link>
+      </div>
     </section>
   );
 }
