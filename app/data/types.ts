@@ -52,14 +52,25 @@ export interface OtherExperienceItem {
 }
 
 export interface ResumeData {
-  name: string;
-  role: string;
-  contact: ContactInfo;
-  summary: string[];
-  skills: SkillCategory[];
-  experiences: ExperienceItem[];
-  projects: ProjectItem[];
-  education: EducationItem[];
-  certifications: CertificationItem[];
-  otherExperiences: OtherExperienceItem[];
+  name: string; // 이름
+  role: string; // 역할
+  contact: ContactInfo; // 연락처
+  summary: string[]; // 핵심 역량
+  skills: SkillCategory[]; // 기술 스택
+  experiences: ExperienceItem[]; // 경력
+  projects: ProjectItem[]; // 프로젝트
+  education: EducationItem[]; // 학력
+  certifications: CertificationItem[]; // 자격증
+  otherExperiences: OtherExperienceItem[]; // 기타 경력
+}
+
+export interface ProjectData {
+  name: string; // 프로젝트명
+  description: string[]; // 프로젝트 설명
+  tech: string[]; // 사용 기술
+  links?: ProjectLinkMap; // 프로젝트 링크
+  period: string; // 프로젝트 기간
+  company: string; // 프로젝트 회사
+  achievements: string[]; // 프로젝트 성과
+  takeaways: string[]; // 프로젝트 배운점
 }
