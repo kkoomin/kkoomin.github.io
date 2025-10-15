@@ -2,35 +2,39 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <div className="text-2xl">MK</div>
-        <div>Frontend Developer</div>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-white to-slate-100">
+      <main className="text-center space-y-12 px-6">
+        {/* Name and Role */}
+        <div className="space-y-4">
+          <h1 className="text-6xl md:text-7xl font-bold text-slate-900 tracking-tight">
+            Minha Koo
+          </h1>
+          <p className="text-xl md:text-2xl text-slate-600 font-light">
+            Frontend Developer
+          </p>
+        </div>
 
-        <div className="w-full">
-          <ul className="flex gap-4 items-center flex-row justify-around">
-            <li>
-              <Link
-                className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-                href={"/resume"}
-              >
-                Resume
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-                href={`/portfolio`}
-              >
-                Portfolio
-              </Link>
-            </li>
-          </ul>
+        {/* Navigation Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+          <Link
+            href="/resume"
+            className="group relative px-8 py-4 w-48 bg-slate-900 text-white rounded-lg font-medium text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <span className="relative z-10">Resume</span>
+            <div className="absolute inset-0 bg-slate-800 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+          </Link>
+
+          <Link
+            href="/portfolio"
+            className="group relative px-8 py-4 w-48 bg-white text-slate-900 rounded-lg font-medium text-lg border-2 border-slate-900 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <span className="relative z-10 group-hover:text-white transition-colors duration-300">
+              Portfolio
+            </span>
+            <div className="absolute inset-0 bg-slate-900 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+          </Link>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <div>@kkoomin</div>
-      </footer>
     </div>
   );
 }

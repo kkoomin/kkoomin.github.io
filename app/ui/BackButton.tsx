@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-export function FloatingBackButton() {
+export function BackButton() {
   return (
     <Link
       href="/"
