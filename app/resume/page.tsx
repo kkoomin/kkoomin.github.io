@@ -11,7 +11,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 print:bg-white">
       <BackButton />
-      <div className="max-w-5xl mx-auto px-6 py-12 print:px-8 print:py-8">
+      <div className="max-w-5xl mx-auto px-6 py-12 print:p-0 print:m-0">
         <Header />
         <Summary />
         <Skills />
