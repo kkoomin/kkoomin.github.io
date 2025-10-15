@@ -6,7 +6,7 @@ export default function Home() {
       <main className="text-center space-y-12 px-6">
         {/* Name and Role */}
         <div className="space-y-4">
-          <h1 className="text-6xl md:text-7xl font-bold text-slate-900 tracking-tight">
+          <h1 className="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight">
             Minha Koo
           </h1>
           <p className="text-xl md:text-2xl text-slate-600 font-light">
