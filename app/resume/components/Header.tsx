@@ -28,11 +28,11 @@ export function Header() {
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <Globe className="w-4 h-4" />
-              <span className="text-sm">{resumeData.contact.website}</span>
+              <span className="text-sm">{resumeData.contact.blog}</span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <Palette className="w-4 h-4" />
-              <span className="text-sm">{resumeData.contact.portfolio}</span>
+              <span className="text-sm">{resumeData.contact.website}</span>
             </div>
             {/* <div className="flex items-center gap-2 text-muted-foreground">
               <Github className="w-4 h-4" />

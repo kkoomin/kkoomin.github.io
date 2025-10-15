@@ -6,7 +6,6 @@ export interface ContactInfo {
   linkedin?: string;
   github?: string;
   location?: string;
-  portfolio?: string;
 }
 export interface SkillCategory {
   category: string;
@@ -73,4 +72,6 @@ export interface ProjectData {
   company: string; // 프로젝트 회사
   achievements: string[]; // 프로젝트 성과
   takeaways: string[]; // 프로젝트 배운점
+  technicalDetails: string[]; // 프로젝트 기술 세부 사항
+  screenshots: string[]; // 프로젝트 스크린샷
 }

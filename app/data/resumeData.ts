@@ -9,7 +9,6 @@ export const resumeData: ResumeData = {
     blog: "velog.io/@kkoom",
     linkedin: "linkedin.com/in/minha-koo",
     github: "github.com/kkoomin",
-    portfolio: "minha-koo.notion.site/portfolio",
     website: "kkoomin.github.io",
   },
   summary: [
