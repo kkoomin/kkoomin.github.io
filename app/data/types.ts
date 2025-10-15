@@ -73,5 +73,5 @@ export interface ProjectData {
   achievements: string[]; // 프로젝트 성과
   takeaways: string[]; // 프로젝트 배운점
   technicalDetails: string[]; // 프로젝트 기술 세부 사항
-  screenshots: string[]; // 프로젝트 스크린샷
+  screenshots: string[]; // 프로젝트 스크린샷 (public folder paths)
 }
