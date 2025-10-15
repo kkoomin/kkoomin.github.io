@@ -5,11 +5,12 @@ export const resumeData: ResumeData = {
   role: "프론트엔드 개발자",
   contact: {
     email: "minha.koo.9@gmail.com",
-    phone: "+82 1071395028",
-    website: "velog.io/@kkoom",
+    phone: "+821071395028",
+    blog: "velog.io/@kkoom",
     linkedin: "linkedin.com/in/minha-koo",
     github: "github.com/kkoomin",
     portfolio: "minha-koo.notion.site/portfolio",
+    website: "kkoomin.github.io",
   },
   summary: [
     "**이커머스 플랫폼 모바일 앱·웹앱 및 PC 웹** 신규 개발과 유지보수 경험",

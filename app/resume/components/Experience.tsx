@@ -1,37 +1,9 @@
 import { Calendar, MapPin, SquareUserRound } from "lucide-react";
 import { resumeData } from "../../data/resumeData";
+import { getTotalCareerPeriod } from "@/app/lib/textUtils";
 
 export function Experience() {
   const experiences = resumeData.experiences;
-
-  function getTotalCareerPeriod(periods: string[]): string {
-    let totalMonths = 0;
-    const now = new Date();
-
-    for (const period of periods) {
-      const [startStr, endStr] = period.split(" - ").map((s) => s.trim());
-      const [startYear, startMonth] = startStr.split(".").map(Number);
-
-      let endYear: number, endMonth: number;
-
-      if (endStr === "현재") {
-        endYear = now.getFullYear();
-        endMonth = now.getMonth() + 1; // 0-based
-      } else {
-        [endYear, endMonth] = endStr.split(".").map(Number);
-      }
-
-      const months = (endYear - startYear) * 12 + (endMonth - startMonth);
-      totalMonths += months;
-    }
-
-    // const years = Math.floor(totalMonths / 12);
-    // const months = totalMonths % 12;
-    const totalYears = totalMonths / 12;
-    const roundedYears = Math.ceil(totalYears);
-
-    return `${roundedYears}년`;
-  }
 
   return (
     <section className="bg-white rounded-xl shadow-sm p-8 mb-6 print:mb-0 print:shadow-none print:rounded-none">
