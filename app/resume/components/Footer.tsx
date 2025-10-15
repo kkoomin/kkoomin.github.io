@@ -1,4 +1,4 @@
-import { resumeData } from "../data/resumeData";
+import { resumeData } from "../../data/resumeData";
 
 export function Footer() {
   return (

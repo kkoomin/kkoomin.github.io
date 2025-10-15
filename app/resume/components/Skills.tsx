@@ -1,5 +1,5 @@
 import { Badge } from "../../ui/Badge";
-import { resumeData } from "../data/resumeData";
+import { resumeData } from "../../data/resumeData";
 
 export function Skills() {
   const skillCategories = resumeData.skills;

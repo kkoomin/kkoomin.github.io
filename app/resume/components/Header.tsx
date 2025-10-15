@@ -1,5 +1,5 @@
 import { Mail, Phone, Linkedin, Github, Globe, Palette } from "lucide-react";
-import { resumeData } from "../data/resumeData";
+import { resumeData } from "../../data/resumeData";
 
 export function Header() {
   return (

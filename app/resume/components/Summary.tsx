@@ -1,4 +1,4 @@
-import { resumeData } from "../data/resumeData";
+import { resumeData } from "../../data/resumeData";
 import { parseBold } from "../../lib/textUtils";
 
 export function Summary() {

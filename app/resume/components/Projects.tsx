@@ -1,6 +1,6 @@
 import { ExternalLink, Github, Calendar } from "lucide-react";
 import { Badge } from "../../ui/Badge";
-import { resumeData } from "../data/resumeData";
+import { resumeData } from "../../data/resumeData";
 
 export function Projects() {
   const projects = resumeData.projects;

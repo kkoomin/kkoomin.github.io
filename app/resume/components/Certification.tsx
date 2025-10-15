@@ -1,5 +1,5 @@
 import { Calendar, Award, CircleEllipsis } from "lucide-react";
-import { resumeData } from "../data/resumeData";
+import { resumeData } from "../../data/resumeData";
 
 export function Certification() {
   const certifications = resumeData.certifications;
