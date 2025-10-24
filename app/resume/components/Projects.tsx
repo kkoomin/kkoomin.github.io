@@ -1,6 +1,7 @@
 import { ExternalLink, Github, Calendar } from "lucide-react";
 import { Badge } from "../../ui/Badge";
 import { resumeData } from "../../data/resumeData";
+import { parseBold } from "@/app/lib/textUtils";
 
 export function Projects() {
   const projects = resumeData.projects;
@@ -65,7 +66,7 @@ export function Projects() {
                     className="text-muted-foreground text-sm leading-relaxed flex"
                   >
                     <span className="mr-2 text-primary">•</span>
-                    <span>{desc}</span>
+                    <span>{parseBold(desc)}</span>
                   </li>
                 ))}
               </ul>

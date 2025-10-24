@@ -17,7 +17,7 @@ export function PortfolioProjects() {
           >
             <div className="mb-4">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-0 mb-2">
-                <h3 className="text-base font-bold">{project.name}</h3>
+                <h3 className="text-base font-bold">{project.title}</h3>
                 <span className="text-sm text-muted-foreground whitespace-nowrap sm:ml-2">
                   {project.period}
                 </span>
@@ -35,7 +35,7 @@ export function PortfolioProjects() {
               </div>
             </div>
 
-            {/* Mobile Screenshots */}
+            {/* Screenshots */}
             {project.screenshots && project.screenshots.length > 0 && (
               <div className="grid grid-cols-4 gap-4 mb-6">
                 {project.screenshots.map((screenshot, i) => (
@@ -43,7 +43,7 @@ export function PortfolioProjects() {
                     <div className="aspect-[9/16] overflow-hidden">
                       <Image
                         src={screenshot}
-                        alt={`${project.name} screenshot ${i + 1}`}
+                        alt={`${project.title} screenshot ${i + 1}`}
                         fill
                         className="object-contain"
                       />
@@ -56,9 +56,9 @@ export function PortfolioProjects() {
               </div>
             )}
 
-            {/* Description */}
-            <div className="mb-4">
-              <h4 className="text-sm font-semibold mb-2">주요 내용</h4>
+            {/* 업무 상세 */}
+            <div className="mb-6">
+              <h4 className="text-md font-semibold mb-2">업무 상세</h4>
               <ul className="space-y-1">
                 {project.description.map((item, i) => (
                   <li
@@ -72,10 +72,10 @@ export function PortfolioProjects() {
               </ul>
             </div>
 
-            {/* Key Achievements */}
+            {/* 주요 성과 */}
             {project.achievements && project.achievements.length > 0 && (
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold mb-2">주요 성과</h4>
+              <div className="mb-6">
+                <h4 className="text-md font-semibold mb-2">주요 성과</h4>
                 <ul className="space-y-1">
                   {project.achievements.map((achievement, i) => (
                     <li
@@ -90,19 +90,29 @@ export function PortfolioProjects() {
               </div>
             )}
 
-            {/* Technical Details */}
+            {/* 기술 세부 사항 */}
             {project.technicalDetails &&
               project.technicalDetails.length > 0 && (
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold mb-2">기술적 구현</h4>
-                  <ul className="space-y-1">
+                <div className="mb-6">
+                  <h4 className="text-md font-semibold mb-2">기술 세부 사항</h4>
+                  <ul className="space-y-3">
                     {project.technicalDetails.map((detail, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 text-sm text-foreground/80"
-                      >
-                        <span className="text-slate-900 mt-0.5">▸</span>
-                        <span>{detail}</span>
+                      <li key={i} className="space-y-1">
+                        <div className="flex items-start gap-2 text-sm font-medium text-foreground">
+                          <span className="text-slate-900 mt-0.5">•</span>
+                          <span>{detail.title}</span>
+                        </div>
+                        <ul className="space-y-1 ml-4">
+                          {detail.points.map((point, j) => (
+                            <li
+                              key={j}
+                              className="flex items-start gap-2 text-sm text-foreground/80"
+                            >
+                              <span className="text-slate-900 mt-0.5">•</span>
+                              <span>{point}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </li>
                     ))}
                   </ul>
@@ -110,22 +120,6 @@ export function PortfolioProjects() {
               )}
 
             {/* Takeaways */}
-            {project.takeaways && project.takeaways.length > 0 && (
-              <div>
-                <h4 className="text-sm font-semibold mb-2">배운 점</h4>
-                <ul className="space-y-1">
-                  {project.takeaways.map((takeaway, i) => (
-                    <li
-                      key={i}
-                      className="flex items-start gap-2 text-sm text-foreground/80"
-                    >
-                      <span className="text-slate-900 mt-0.5">▸</span>
-                      <span>{takeaway}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
           </div>
         ))}
       </div>

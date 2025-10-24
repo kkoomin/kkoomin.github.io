@@ -20,16 +20,10 @@ export interface ExperienceItem {
   achievements: string[];
 }
 
-export interface ProjectLinkMap {
-  demo?: string;
-  github?: string;
-}
-
 export interface ProjectItem {
   name: string;
   description: string[];
   tech: string[];
-  links?: ProjectLinkMap;
   period: string;
   company: string;
 }
@@ -62,16 +56,18 @@ export interface ResumeData {
   certifications: CertificationItem[]; // 자격증
   otherExperiences: OtherExperienceItem[]; // 기타 경력
 }
-
 export interface ProjectData {
-  name: string; // 프로젝트명
-  description: string[]; // 프로젝트 설명
+  title: string; // 프로젝트명
+  company: string; // 회사명
+  period: string; // 프로젝트 기간 (YYYY.MM - YYYY.MM)
+  description: string[]; // 업무 상세
+  achievements: string[]; // 주요 성과
+  technicalDetails: TechnicalDetail[]; // 기술 세부 사항
   tech: string[]; // 사용 기술
-  links?: ProjectLinkMap; // 프로젝트 링크
-  period: string; // 프로젝트 기간
-  company: string; // 프로젝트 회사
-  achievements: string[]; // 프로젝트 성과
-  takeaways: string[]; // 프로젝트 배운점
-  technicalDetails: string[]; // 프로젝트 기술 세부 사항
-  screenshots: string[]; // 프로젝트 스크린샷 (public folder paths)
+  screenshots?: string[]; // 스크린샷 경로 (public 폴더 기준)
+}
+
+interface TechnicalDetail {
+  title: string; // 기술 세부 사항 타이틀
+  points: string[]; // 기술 세부 사항 하위 bullet
 }
