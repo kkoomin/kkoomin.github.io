@@ -5,18 +5,19 @@ export const resumeData: ResumeData = {
   role: "프론트엔드 개발자",
   contact: {
     email: "minha.koo.9@gmail.com",
-    phone: "+821071395028",
+    phone: "+82 10 7139 5028",
     blog: "velog.io/@kkoom",
     linkedin: "linkedin.com/in/minha-koo",
     github: "github.com/kkoomin",
     website: "kkoomin.github.io",
+    linkedin_en: "www.linkedin.com/in/minha-koo/?locale=en_US",
   },
   summary: [
-    "**이커머스 플랫폼 모바일 앱·웹앱 및 PC 웹** 신규 개발과 유지보수 경험",
+    "**이커머스 플랫폼 모바일 앱 · 웹앱 및 PC 웹** 신규 개발과 유지보수 경험",
     "**B2B 솔루션 어드민** 설계 및 운영",
     "Vue · Angular 기반 서비스 → **Next.js · React 기반으로 마이그레이션**",
     "레거시 코드 개선 및 **추상화, 성능 최적화 경험**",
-    "런던 현지 코딩 교육과정 수료, **영문 기술 커뮤니케이션 및 협업 능력** 보유",
+    "런던 현지 코딩 교육과정 수료, **영문 기술 커뮤니케이션 및 글로벌 프로젝트 역량** 보유",
     " **AI 기반 코드 생성 및 최적화 경험**, 개발 효율성과 생산성 향상",
   ],
   skills: [

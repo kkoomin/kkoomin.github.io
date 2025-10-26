@@ -1,5 +1,4 @@
 import { PortfolioHeader } from "./components/PortfolioHeader";
-import { PortfolioSummary } from "./components/PortfolioSummary";
 import { PortfolioExperience } from "./components/PortfolioExperience";
 import { PortfolioProjects } from "./components/PortfolioProjects";
 import { PortfolioSkills } from "./components/PortfolioSkills";
@@ -11,8 +10,7 @@ export default function Page() {
       <BackButton />
       <div className="max-w-5xl mx-auto bg-white shadow-lg print:shadow-none px-12 py-10">
         <PortfolioHeader />
-        <div className="flex space-between md:grid md:grid-cols-2 gap-6 mb-8">
-          <PortfolioSummary />
+        <div className="mb-8">
           <PortfolioExperience />
         </div>
         <PortfolioProjects />

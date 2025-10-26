@@ -4,11 +4,12 @@ import { resumeData } from "@/app/data/resumeData";
 export function PortfolioHeader() {
   return (
     <header className="mb-8">
-      {/* Title, Name, Role, and Contact Info */}
       <div className="mb-6">
-        <h1 className="text-4xl font-bold text-slate-900 mb-6">경력 기술서</h1>
+        <h1 className="text-2xl font-bold text-slate-900 mb-6">
+          상세 경력 기술서
+        </h1>
         <div className="mb-3">
-          <p className="text-2xl font-bold text-slate-900">{resumeData.name}</p>
+          <p className="text-xl font-bold text-slate-900">{resumeData.name}</p>
           <p className="text-lg text-slate-700 mt-1">{resumeData.role}</p>
         </div>
 
@@ -31,7 +32,7 @@ export function PortfolioHeader() {
           {resumeData.contact.blog && (
             <span className="flex items-center gap-1.5">
               <Globe className="w-4 h-4" />
-              {resumeData.contact.blog}
+              {resumeData.contact.website}
             </span>
           )}
         </div>

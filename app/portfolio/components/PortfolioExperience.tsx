@@ -4,7 +4,7 @@ import { getTotalCareerPeriod } from "@/app/lib/textUtils";
 export function PortfolioExperience() {
   return (
     <div>
-      <div className="flex justify-between items-center mb-3">
+      <div className="flex justify-between items-center mb-4 pb-2 border-b border-slate-300">
         <h3 className="font-bold text-lg text-slate-900">경력</h3>
         <span className="text-sm text-slate-600">
           {getTotalCareerPeriod(
@@ -18,12 +18,12 @@ export function PortfolioExperience() {
             <div className="flex justify-between items-start gap-2">
               <div className="flex-1 min-w-0">
                 <p className="font-semibold text-slate-900">{exp.company}</p>
-                <p className="text-slate-600 text-xs">
+                <p className="text-slate-600 text-sm">
                   {exp.title}
                   {exp.location && ` | ${exp.location}`}
                 </p>
               </div>
-              <span className="text-xs text-slate-500 whitespace-nowrap">
+              <span className="text-sm text-slate-500 whitespace-nowrap">
                 {exp.period}
               </span>
             </div>

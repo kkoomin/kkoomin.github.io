@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Badge } from "@/app/ui/Badge";
 import { portfolioProjects } from "@/app/data/projectData";
+import { parseBold } from "@/app/lib/textUtils";
 
 export function PortfolioProjects() {
   return (
@@ -66,7 +67,7 @@ export function PortfolioProjects() {
                     className="flex items-start gap-2 text-sm text-foreground/80"
                   >
                     <span className="text-slate-900 mt-0.5">•</span>
-                    <span>{item}</span>
+                    <span>{parseBold(item)}</span>
                   </li>
                 ))}
               </ul>
@@ -83,7 +84,7 @@ export function PortfolioProjects() {
                       className="flex items-start gap-2 text-sm text-foreground/80"
                     >
                       <span className="text-slate-900 mt-0.5">•</span>
-                      <span>{achievement}</span>
+                      <span>{parseBold(achievement)}</span>
                     </li>
                   ))}
                 </ul>
@@ -100,7 +101,7 @@ export function PortfolioProjects() {
                       <li key={i} className="space-y-1">
                         <div className="flex items-start gap-2 text-sm font-medium text-foreground">
                           <span className="text-slate-900 mt-0.5">•</span>
-                          <span>{detail.title}</span>
+                          <span className="font-bold">{detail.title}</span>
                         </div>
                         <ul className="space-y-1 ml-4">
                           {detail.points.map((point, j) => (
@@ -109,7 +110,7 @@ export function PortfolioProjects() {
                               className="flex items-start gap-2 text-sm text-foreground/80"
                             >
                               <span className="text-slate-900 mt-0.5">•</span>
-                              <span>{point}</span>
+                              <span>{parseBold(point)}</span>
                             </li>
                           ))}
                         </ul>
@@ -118,8 +119,6 @@ export function PortfolioProjects() {
                   </ul>
                 </div>
               )}
-
-            {/* Takeaways */}
           </div>
         ))}
       </div>

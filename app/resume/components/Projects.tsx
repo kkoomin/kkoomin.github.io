@@ -20,7 +20,7 @@ export function Projects() {
           >
             <div className="border border-border rounded-lg p-6 mb-6">
               <div className="flex items-start justify-between mb-3">
-                <h3 className="font-bold">{project.name}</h3>
+                <h3 className="font-bold text-base">{project.name}</h3>
                 <div className="flex items-center gap-2 text-sm font-bold text-muted-foreground">
                   {project.company}
                 </div>

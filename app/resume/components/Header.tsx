@@ -7,7 +7,7 @@ export function Header() {
       <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
         <div className="flex-1">
           <div className="flex mb-3 gap-4">
-            <h1 className="font-bold text-4xl">{resumeData.name}</h1>
+            <h1 className="font-bold text-2xl">{resumeData.name}</h1>
             <p className="flex items-end text-muted-foreground">
               {resumeData.role}
             </p>

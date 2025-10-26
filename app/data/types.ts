@@ -1,11 +1,12 @@
 export interface ContactInfo {
   email: string;
   phone: string;
-  blog?: string;
-  website?: string;
-  linkedin?: string;
-  github?: string;
+  blog: string;
+  website: string;
+  linkedin: string;
+  github: string;
   location?: string;
+  linkedin_en: string;
 }
 export interface SkillCategory {
   category: string;
