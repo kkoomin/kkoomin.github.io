@@ -3,7 +3,7 @@ import { resumeData } from "@/app/data/resumeData";
 
 export function PortfolioHeader() {
   return (
-    <header className="mb-10">
+    <header className="mb-10 print:mb-15">
       <div className="text-2xl font-bold text-slate-900 mb-8">
         상세 경력 기술서
       </div>

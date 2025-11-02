@@ -3,10 +3,10 @@ import { getTotalCareerPeriod } from "@/app/lib/textUtils";
 
 export function PortfolioExperience() {
   return (
-    <section className="mb-10">
+    <section className="mb-10 print:mb-15">
       <div className="flex w-full justify-between mb-6 pb-2 border-b border-border">
         <h2 className="text-lg font-bold">경력</h2>
-        <div className="text-md text-muted-foreground print:text-slate-700 flex items-center">
+        <div className="text-md text-muted-foreground  flex items-center">
           {getTotalCareerPeriod(resumeData.experiences.map((e) => e.period))}
         </div>
       </div>

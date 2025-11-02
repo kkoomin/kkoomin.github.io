@@ -21,13 +21,13 @@ export function Projects() {
             <div className="border border-border rounded-lg p-6 mb-6">
               <div className="flex items-start justify-between mb-3">
                 <h3 className="font-bold text-base">{project.name}</h3>
-                <div className="flex items-center gap-2 text-sm font-bold text-muted-foreground print:text-slate-700">
+                <div className="flex items-center gap-2 text-sm font-bold text-muted-foreground ">
                   {project.company}
                 </div>
               </div>
               <div className="flex items-center justify-between mb-4 gap-4">
                 {project.period && (
-                  <div className="flex items-center gap-2 text-muted-foreground print:text-slate-700">
+                  <div className="flex items-center gap-2 text-muted-foreground ">
                     <Calendar className="w-4 h-4" />
                     <span className="text-sm">{project.period}</span>
                   </div>
@@ -49,7 +49,7 @@ export function Projects() {
                 {project.description.map((desc, i) => (
                   <li
                     key={`${i}_${Math.random()}`}
-                    className="text-muted-foreground print:text-slate-700 text-[15px] leading-relaxed flex"
+                    className="text-muted-foreground  text-[15px] leading-relaxed flex"
                   >
                     <span className="mr-2 text-primary">•</span>
                     <span>{parseBold(desc)}</span>

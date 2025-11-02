@@ -11,7 +11,7 @@ export function Summary() {
         {resumeData.summary.map((summary, i) => (
           <li
             key={i}
-            className="text-muted-foreground print:text-slate-700 text-[15px] leading-relaxed flex mb-0.5"
+            className="text-muted-foreground  text-[15px] leading-relaxed flex mb-0.5"
           >
             <span className="mr-2 text-primary">•</span>
             <span>{parseBold(summary)}</span>

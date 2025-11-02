@@ -22,7 +22,7 @@ export function Certification() {
               {certifications.map((cert, index) => (
                 <div className="mb-4" key={index}>
                   <h3 className="mb-1 font-bold">{cert.title}</h3>
-                  <p className="text-muted-foreground print:text-slate-700 text-[15px]">
+                  <p className="text-muted-foreground  text-[15px]">
                     {cert.description}
                   </p>
                 </div>
@@ -43,7 +43,7 @@ export function Certification() {
               {otherExperiences.map((exp, index) => (
                 <div className="mb-4" key={index}>
                   <h3 className="mb-1 font-bold">{exp.title}</h3>
-                  <div className="flex items-center gap-2 text-muted-foreground print:text-slate-700 text-[15px]">
+                  <div className="flex items-center gap-2 text-muted-foreground  text-[15px]">
                     <Calendar className="w-4 h-4" />
                     <span>{exp.period}</span>
                   </div>
@@ -51,7 +51,7 @@ export function Certification() {
                     {exp.description.map((desc, i) => (
                       <li
                         key={i}
-                        className="text-muted-foreground print:text-slate-700 text-[15px] leading-relaxed flex"
+                        className="text-muted-foreground  text-[15px] leading-relaxed flex"
                       >
                         <span className="mr-2 text-primary">•</span>
                         <span>{desc}</span>

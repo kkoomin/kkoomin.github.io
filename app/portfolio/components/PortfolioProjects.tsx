@@ -5,7 +5,7 @@ import { parseBold } from "@/app/lib/textUtils";
 
 export function PortfolioProjects() {
   return (
-    <section className="mb-10">
+    <section className="mb-10 print:mb-15">
       <h2 className="text-lg mb-6 pb-2 border-b border-border font-bold">
         프로젝트
       </h2>
@@ -65,7 +65,7 @@ export function PortfolioProjects() {
                 {project.description.map((item, i) => (
                   <li
                     key={i}
-                    className="flex items-start gap-2 text-[15px] text-muted-foreground print:text-slate-700 leading-relaxed"
+                    className="flex items-start gap-2 text-[15px] text-muted-foreground  leading-relaxed"
                   >
                     <span className="text-slate-900 mt-0.5">•</span>
                     <span>{parseBold(item)}</span>
@@ -82,7 +82,7 @@ export function PortfolioProjects() {
                   {project.achievements.map((achievement, i) => (
                     <li
                       key={i}
-                      className="flex items-start gap-2 text-[15px] leading-relaxed text-muted-foreground print:text-slate-700"
+                      className="flex items-start gap-2 text-[15px] leading-relaxed text-muted-foreground "
                     >
                       <span className="text-slate-900 mt-0.5">•</span>
                       <span>{parseBold(achievement)}</span>
@@ -100,7 +100,7 @@ export function PortfolioProjects() {
                   <ul className="space-y-3">
                     {project.technicalDetails.map((detail, i) => (
                       <li key={i} className="space-y-1">
-                        <div className="flex items-start gap-2 text-[15px] font-medium text-muted-foreground print:text-slate-700 leading-relaxed">
+                        <div className="flex items-start gap-2 text-[15px] font-medium text-muted-foreground  leading-relaxed">
                           <span className="text-slate-900 mt-0.5">•</span>
                           <span className="font-bold">{detail.title}</span>
                         </div>
@@ -108,7 +108,7 @@ export function PortfolioProjects() {
                           {detail.points.map((point, j) => (
                             <li
                               key={j}
-                              className="flex items-start gap-2 text-[15px] text-muted-foreground print:text-slate-700 leading-relaxed"
+                              className="flex items-start gap-2 text-[15px] text-muted-foreground  leading-relaxed"
                             >
                               <span className="text-slate-900 mt-0.5">•</span>
                               <span>{parseBold(point)}</span>

@@ -21,23 +21,23 @@ export function Header() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-            <div className="flex items-center gap-2 text-muted-foreground print:text-slate-700">
+            <div className="flex items-center gap-2 text-muted-foreground ">
               <Mail className="w-4 h-4" />
               <span className="text-sm">{resumeData.contact.email}</span>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground print:text-slate-700">
+            <div className="flex items-center gap-2 text-muted-foreground ">
               <Phone className="w-4 h-4" />
               <span className="text-sm">{resumeData.contact.phone}</span>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground print:text-slate-700">
+            <div className="flex items-center gap-2 text-muted-foreground ">
               <Linkedin className="w-4 h-4" />
               <span className="text-sm">{resumeData.contact.linkedin}</span>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground print:text-slate-700">
+            <div className="flex items-center gap-2 text-muted-foreground ">
               <Globe className="w-4 h-4" />
               <span className="text-sm">{resumeData.contact.blog}</span>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground print:text-slate-700">
+            <div className="flex items-center gap-2 text-muted-foreground ">
               <Palette className="w-4 h-4" />
               <span className="text-sm">{resumeData.contact.website}</span>
             </div>

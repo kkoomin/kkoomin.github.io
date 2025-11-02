@@ -13,7 +13,7 @@ export function PortfolioSkills() {
             <h4 className="text-md font-bold mb-2 text-muted-foreground leading-relaxed">
               {category.category}
             </h4>
-            <p className="text-[15px] text-muted-foreground print:text-slate-700 leading-relaxed">
+            <p className="text-[15px] text-muted-foreground  leading-relaxed">
               {category.skills.join(" • ")}
             </p>
           </div>

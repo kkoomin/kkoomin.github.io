@@ -19,8 +19,12 @@ export function Education() {
             </div>
             <div>
               <h3 className="mb-1 font-bold">{edu.school}</h3>
-              <p className="text-muted-foreground print:text-slate-700 text-[15px] mb-1">{edu.degree}</p>
-              <p className="text-muted-foreground print:text-slate-700 text-[15px]">{edu.graduated}</p>
+              <p className="text-muted-foreground  text-[15px] mb-1">
+                {edu.degree}
+              </p>
+              <p className="text-muted-foreground  text-[15px]">
+                {edu.graduated}
+              </p>
             </div>
           </div>
         ))}
