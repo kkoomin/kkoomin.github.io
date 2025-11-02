@@ -6,10 +6,10 @@ export function Experience() {
   const experiences = resumeData.experiences;
 
   return (
-    <section className="bg-white rounded-xl shadow-sm p-8 mb-6 print:mb-0 print:shadow-none print:rounded-none">
+    <section className="bg-white rounded-xl shadow-sm p-8 mb-6 print:mb-2 print:shadow-none print:rounded-none">
       <div className="flex w-full justify-between mb-6 pb-2 border-b border-border">
         <h2 className="text-lg font-bold">경력</h2>
-        <div className="text-md text-muted-foreground flex items-center">
+        <div className="text-md text-muted-foreground print:text-slate-700 flex items-center">
           {getTotalCareerPeriod(experiences.map((e) => e.period))}
         </div>
       </div>
@@ -24,7 +24,7 @@ export function Experience() {
 
             <div className="mb-3">
               <h3 className="mb-1 font-bold text-base">{exp.company}</h3>
-              <div className="flex flex-wrap gap-x-4 gap-y-1 text-muted-foreground">
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-muted-foreground print:text-slate-700">
                 <div className="flex items-center gap-2">
                   <SquareUserRound className="w-4 h-4" />
                   <span className="text-sm">{exp.title}</span>
@@ -45,7 +45,7 @@ export function Experience() {
               {exp.achievements.map((achievement, i) => (
                 <li
                   key={`${i}_${Math.random()}`}
-                  className="text-muted-foreground text-sm leading-relaxed flex"
+                  className="text-muted-foreground print:text-slate-700 text-[15px] leading-relaxed flex"
                 >
                   <span className="mr-2 text-primary">•</span>
                   <span>{achievement}</span>

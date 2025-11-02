@@ -4,7 +4,7 @@ import { resumeData } from "../../data/resumeData";
 export function Education() {
   const education = resumeData.education;
   return (
-    <section className="bg-white rounded-xl shadow-sm p-8 mb-6 print:mb-0 print:shadow-none print:rounded-none print:p-6">
+    <section className="bg-white rounded-xl shadow-sm p-8 mb-6 print:mb-2 print:shadow-none print:rounded-none print:p-6">
       <h2 className="text-lg mb-6 pb-2 border-b border-border font-bold">
         학력
       </h2>
@@ -19,8 +19,8 @@ export function Education() {
             </div>
             <div>
               <h3 className="mb-1 font-bold">{edu.school}</h3>
-              <p className="text-muted-foreground text-sm mb-1">{edu.degree}</p>
-              <p className="text-muted-foreground text-sm">{edu.graduated}</p>
+              <p className="text-muted-foreground print:text-slate-700 text-[15px] mb-1">{edu.degree}</p>
+              <p className="text-muted-foreground print:text-slate-700 text-[15px]">{edu.graduated}</p>
             </div>
           </div>
         ))}

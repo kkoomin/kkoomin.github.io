@@ -5,7 +5,7 @@ export function Certification() {
   const certifications = resumeData.certifications;
   const otherExperiences = resumeData.otherExperiences;
   return (
-    <section className="bg-white rounded-xl shadow-sm p-8 print:mb-0 print:shadow-none print:rounded-none print:p-6">
+    <section className="bg-white rounded-xl shadow-sm p-8 print:mb-2 print:shadow-none print:rounded-none print:p-6">
       <h2 className="text-lg mb-6 pb-2 border-b border-border font-bold">
         자격증 및 기타 이력
       </h2>
@@ -20,9 +20,9 @@ export function Certification() {
           <div>
             <ul className="space-y-1">
               {certifications.map((cert, index) => (
-                <div key={index}>
+                <div className="mb-4" key={index}>
                   <h3 className="mb-1 font-bold">{cert.title}</h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground print:text-slate-700 text-[15px]">
                     {cert.description}
                   </p>
                 </div>
@@ -30,6 +30,7 @@ export function Certification() {
             </ul>
           </div>
         </div>
+
         <div className="flex gap-4">
           <div className="flex-shrink-0">
             <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center print:w-10 print:h-10">
@@ -42,7 +43,7 @@ export function Certification() {
               {otherExperiences.map((exp, index) => (
                 <div className="mb-4" key={index}>
                   <h3 className="mb-1 font-bold">{exp.title}</h3>
-                  <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                  <div className="flex items-center gap-2 text-muted-foreground print:text-slate-700 text-[15px]">
                     <Calendar className="w-4 h-4" />
                     <span>{exp.period}</span>
                   </div>
@@ -50,7 +51,7 @@ export function Certification() {
                     {exp.description.map((desc, i) => (
                       <li
                         key={i}
-                        className="text-muted-foreground text-sm leading-relaxed flex"
+                        className="text-muted-foreground print:text-slate-700 text-[15px] leading-relaxed flex"
                       >
                         <span className="mr-2 text-primary">•</span>
                         <span>{desc}</span>

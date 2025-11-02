@@ -45,10 +45,15 @@ export interface OtherExperienceItem {
   description: string[];
 }
 
+/* 
+  이력서(Resume) 데이터 타입 
+*/
 export interface ResumeData {
   name: string; // 이름
+  name_en: string; // 영문 이름
   role: string; // 역할
   contact: ContactInfo; // 연락처
+  introduction: string[]; // 자기소개
   summary: string[]; // 핵심 역량
   skills: SkillCategory[]; // 기술 스택
   experiences: ExperienceItem[]; // 경력
@@ -57,6 +62,10 @@ export interface ResumeData {
   certifications: CertificationItem[]; // 자격증
   otherExperiences: OtherExperienceItem[]; // 기타 경력
 }
+
+/* 
+  프로젝트(Portfolio) 데이터 타입 
+*/
 export interface ProjectData {
   title: string; // 프로젝트명
   company: string; // 회사명

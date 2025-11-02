@@ -7,7 +7,7 @@ export function Projects() {
   const projects = resumeData.projects;
 
   return (
-    <section className="bg-white rounded-xl shadow-sm p-8 mb-6 print:mb-0 print:shadow-none print:rounded-none print:p-6">
+    <section className="bg-white rounded-xl shadow-sm p-8 mb-6 print:mb-2 print:shadow-none print:rounded-none print:p-6">
       <h2 className="text-lg mb-6 pb-2 border-b border-border font-bold">
         프로젝트
       </h2>
@@ -21,27 +21,13 @@ export function Projects() {
             <div className="border border-border rounded-lg p-6 mb-6">
               <div className="flex items-start justify-between mb-3">
                 <h3 className="font-bold text-base">{project.name}</h3>
-                <div className="flex items-center gap-2 text-sm font-bold text-muted-foreground">
+                <div className="flex items-center gap-2 text-sm font-bold text-muted-foreground print:text-slate-700">
                   {project.company}
                 </div>
-                {/* <div className="flex gap-2 hidden">
-                <a
-                  href={project.links.demo}
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <ExternalLink className="w-5 h-5" />
-                </a>
-                <a
-                  href={project.links.github}
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <Github className="w-5 h-5" />
-                </a>
-              </div> */}
               </div>
               <div className="flex items-center justify-between mb-4 gap-4">
                 {project.period && (
-                  <div className="flex items-center gap-2 text-muted-foreground">
+                  <div className="flex items-center gap-2 text-muted-foreground print:text-slate-700">
                     <Calendar className="w-4 h-4" />
                     <span className="text-sm">{project.period}</span>
                   </div>
@@ -63,7 +49,7 @@ export function Projects() {
                 {project.description.map((desc, i) => (
                   <li
                     key={`${i}_${Math.random()}`}
-                    className="text-muted-foreground text-sm leading-relaxed flex"
+                    className="text-muted-foreground print:text-slate-700 text-[15px] leading-relaxed flex"
                   >
                     <span className="mr-2 text-primary">•</span>
                     <span>{parseBold(desc)}</span>

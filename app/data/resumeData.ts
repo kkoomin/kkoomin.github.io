@@ -2,6 +2,7 @@ import type { ResumeData } from "./types";
 
 export const resumeData: ResumeData = {
   name: "구민하",
+  name_en: "Minha Koo",
   role: "프론트엔드 개발자",
   contact: {
     email: "minha.koo.9@gmail.com",
@@ -12,6 +13,14 @@ export const resumeData: ResumeData = {
     website: "kkoomin.github.io",
     linkedin_en: "www.linkedin.com/in/minha-koo/?locale=en_US",
   },
+  introduction: [
+    "무신사 솔드아웃에서 **B2C 웹과 앱 서비스를 개발하고 운영하며 이용자 중심의 문제 해결 경험**을 쌓았고, B2B 솔루션 기업 루나소프트에서 광고, 마케팅 어드민 신규 개발과 고도화를 주도했습니다.",
+    "**기술 습득과 변화에 빠르게 적응**합니다. React, Vue, Angular 모두 실무에서 활용했으며, 기술 간 마이그레이션 경험이 있습니다.",
+    "**주도적이고 효율적인 업무 환경을 지향**합니다. 비지니스 문제 해결을 최우선으로 두고 합리적인 의사 결정을 하고자 합니다.",
+    "**작성한 코드에 책임감을 가지고 개발**합니다. 팀 내 단독 프론트엔드 개발자로도, 프론트엔드 팀의 일원으로도 일해보며 근거 있는 코드 작성과 협업을 위한 설계를 고민해왔습니다.",
+    "**사내 스터디를 통해 팀 동료들과 새로운 기술과 문제 해결 방식에 대해 논의**했습니다. 발전에 도움되는 다양한 정보를 공유하는 것을 좋아합니다.",
+    "**‘헤맨 만큼 내 땅이다’**라는 말처럼 **경험에서 오는 성장**을 즐깁니다. 실패를 두려워하지 않고 늘 도전하고자 합니다.",
+  ],
   summary: [
     "**이커머스 플랫폼 모바일 앱 · 웹앱 및 PC 웹** 신규 개발과 유지보수 경험",
     "**B2B 솔루션 어드민** 설계 및 운영",
@@ -234,6 +243,15 @@ export const resumeData: ResumeData = {
     },
   ],
   otherExperiences: [
+    {
+      title: "사내(솔드아웃) FE 스터디",
+      period: "2023.07 - 2024.02",
+      location: "Seoul, South Korea",
+      description: [
+        "주 1회 퇴근 후 스터디 진행, 현재 맡은 업무 내 이슈 사항과 해결방안 공유",
+        "새로 학습한 기술 스택이나 방법론에 대해 노션에 글을 쓰고 짧은 발표 형식으로 공유",
+      ],
+    },
     {
       title: "Open Food Network UK Hackathon",
       period: "2019.05",

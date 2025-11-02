@@ -1,20 +1,20 @@
 import { resumeData } from "../../data/resumeData";
 import { parseBold } from "../../lib/textUtils";
 
-export function Summary() {
+export function Introduction() {
   return (
     <section className="bg-white rounded-xl shadow-sm p-8 mb-6 print:mb-2 print:shadow-none print:rounded-none">
       <h2 className="text-lg mb-6 pb-2 border-b border-border font-bold">
-        핵심 역량
+        자기소개
       </h2>
       <ul>
-        {resumeData.summary.map((summary, i) => (
+        {resumeData.introduction.map((introduction, i) => (
           <li
             key={i}
             className="text-muted-foreground print:text-slate-700 text-[15px] leading-relaxed flex mb-0.5"
           >
             <span className="mr-2 text-primary">•</span>
-            <span>{parseBold(summary)}</span>
+            <span>{parseBold(introduction)}</span>
           </li>
         ))}
       </ul>

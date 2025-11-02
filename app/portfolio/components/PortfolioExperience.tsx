@@ -3,33 +3,33 @@ import { getTotalCareerPeriod } from "@/app/lib/textUtils";
 
 export function PortfolioExperience() {
   return (
-    <div>
-      <div className="flex justify-between items-center mb-4 pb-2 border-b border-slate-300">
-        <h3 className="font-bold text-lg text-slate-900">경력</h3>
-        <span className="text-sm text-slate-600">
-          {getTotalCareerPeriod(
-            resumeData.experiences.map((exp) => exp.period)
-          )}
-        </span>
+    <section className="mb-10">
+      <div className="flex w-full justify-between mb-6 pb-2 border-b border-border">
+        <h2 className="text-lg font-bold">경력</h2>
+        <div className="text-md text-muted-foreground print:text-slate-700 flex items-center">
+          {getTotalCareerPeriod(resumeData.experiences.map((e) => e.period))}
+        </div>
       </div>
-      <div className="space-y-3 text-sm">
+      <div className="space-y-3 text-[15px] leading-relaxed">
         {resumeData.experiences.map((exp, index) => (
           <div key={index}>
             <div className="flex justify-between items-start gap-2">
               <div className="flex-1 min-w-0">
-                <p className="font-semibold text-slate-900">{exp.company}</p>
-                <p className="text-slate-600 text-sm">
+                <p className="font-semibold text-slate-900 leading-relaxed">
+                  {exp.company}
+                </p>
+                <p className="text-muted-foreground text-[15px] leading-relaxed">
                   {exp.title}
                   {exp.location && ` | ${exp.location}`}
                 </p>
               </div>
-              <span className="text-sm text-slate-500 whitespace-nowrap">
+              <span className="text-[15px] text-muted-foreground whitespace-nowrap leading-relaxed">
                 {exp.period}
               </span>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
