@@ -222,14 +222,14 @@ body {
   }
 }
 
-/* 타이핑 속도 2.5s, 커서 깜빡거림 0.75s, 글자수 steps(9, end) */
+/* 타이핑 속도 2.8s, 커서 깜빡거림 0.8s, 글자수 steps(9, end) */
 .typing-effect {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid currentColor;
-  animation: typing 2.5s steps(9, end) forwards,
-    blink-cursor 0.75s step-end 2.5s infinite;
+  animation: typing 2.8s steps(9, end) forwards,
+    blink-cursor 0.8s step-end 3.2s infinite;
   width: 0;
 }
 
