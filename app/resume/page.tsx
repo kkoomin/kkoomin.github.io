@@ -6,6 +6,7 @@ import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Education } from "./components/Education";
 import { Certification } from "./components/Certification";
+import { DetailedProjects } from "./components/DetailedProjects";
 import { BackButton } from "../ui/BackButton";
 
 export default function App() {
@@ -21,6 +22,9 @@ export default function App() {
         <Projects />
         <Education />
         <Certification />
+
+        {/* 상세 경력 기술서 합본용 */}
+        {/* <DetailedProjects /> */}
       </div>
     </div>
   );
