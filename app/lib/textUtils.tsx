@@ -1,8 +1,9 @@
-// ** 텍스트 굵게 처리
-export function parseBold(text: string): React.ReactNode[] {
-  const parts = text.split(/(\*\*.*?\*\*)/g);
+// ** bold 처리 / 줄바꿈 처리
+export function parseText(text: string): React.ReactNode[] {
+  const parts = text.split(/(\*\*.*?\*\*|<br\s*\/?>|\n)/g);
 
   return parts.map((part, idx) => {
+    // **bold**
     if (part.startsWith("**") && part.endsWith("**")) {
       return (
         <span key={idx} className="font-bold">
@@ -10,7 +11,14 @@ export function parseBold(text: string): React.ReactNode[] {
         </span>
       );
     }
-    return part;
+
+    // <br/> 또는 \n 처리
+    if (part === "<br/>" || part === "<br>" || part === "\n") {
+      return <br key={idx} />;
+    }
+
+    // 일반 텍스트
+    return <span key={idx}>{part}</span>;
   });
 }
 

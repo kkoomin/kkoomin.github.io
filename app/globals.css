@@ -246,4 +246,10 @@ body {
   .page-footer .page-number:after {
     content: counter(page) " / " counter(pages);
   }
+
+  /* Force page break */
+  .print-break-before-page {
+    page-break-before: always;
+    break-before: page;
+  }
 }

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Badge } from "@/app/ui/Badge";
 import { portfolioProjects } from "@/app/data/projectData";
-import { parseBold } from "@/app/lib/textUtils";
+import { parseText } from "@/app/lib/textUtils";
 
 export function PortfolioProjects() {
   return (
@@ -68,7 +68,7 @@ export function PortfolioProjects() {
                     className="flex items-start gap-2 text-[15px] text-muted-foreground  leading-relaxed"
                   >
                     <span className="text-slate-900 mt-0.5">•</span>
-                    <span>{parseBold(item)}</span>
+                    <span>{parseText(item)}</span>
                   </li>
                 ))}
               </ul>
@@ -85,7 +85,7 @@ export function PortfolioProjects() {
                       className="flex items-start gap-2 text-[15px] leading-relaxed text-muted-foreground "
                     >
                       <span className="text-slate-900 mt-0.5">•</span>
-                      <span>{parseBold(achievement)}</span>
+                      <span>{parseText(achievement)}</span>
                     </li>
                   ))}
                 </ul>
@@ -111,7 +111,7 @@ export function PortfolioProjects() {
                               className="flex items-start gap-2 text-[15px] text-muted-foreground  leading-relaxed"
                             >
                               <span className="text-slate-900 mt-0.5">•</span>
-                              <span>{parseBold(point)}</span>
+                              <span>{parseText(point)}</span>
                             </li>
                           ))}
                         </ul>

@@ -1,5 +1,5 @@
 import { resumeData } from "../../data/resumeData";
-import { parseBold } from "../../lib/textUtils";
+import { parseText } from "../../lib/textUtils";
 
 export function Summary() {
   return (
@@ -14,7 +14,7 @@ export function Summary() {
             className="text-muted-foreground  text-[15px] leading-relaxed flex mb-0.5"
           >
             <span className="mr-2 text-primary">•</span>
-            <span>{parseBold(summary)}</span>
+            <span>{parseText(summary)}</span>
           </li>
         ))}
       </ul>
