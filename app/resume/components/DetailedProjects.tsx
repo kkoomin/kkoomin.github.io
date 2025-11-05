@@ -7,7 +7,7 @@ export function DetailedProjects() {
   return (
     <section className="bg-white rounded-xl shadow-sm p-8 mb-6 print:mb-2 print:shadow-none print:rounded-none print:p-6 print-break-before-page">
       <h2 className="text-lg mb-6 pb-2 border-b border-border font-bold">
-        상세 프로젝트
+        상세 경력 기술서
       </h2>
 
       <div className="space-y-6 print:space-y-4">

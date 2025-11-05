@@ -15,13 +15,15 @@ export default function App() {
       <BackButton />
       <div className="max-w-4xl mx-auto px-6 py-12 print:p-0 print:m-0">
         <Header />
-        <Introduction />
         <Summary />
         <Experience />
         <Skills />
         <Projects />
         <Education />
         <Certification />
+
+        {/* 자기소개 합본용*/}
+        <Introduction />
 
         {/* 상세 경력 기술서 합본용 */}
         {/* <DetailedProjects /> */}
