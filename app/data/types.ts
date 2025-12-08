@@ -74,8 +74,9 @@ export interface ProjectData {
   company: string; // 회사명
   period: string; // 프로젝트 기간 (YYYY.MM - YYYY.MM)
   description: string[]; // 업무 상세
-  achievements: string[]; // 주요 성과
-  technicalDetails: TechnicalDetail[]; // 기술 세부 사항
+  issues?: string[]; // 문제 정의
+  technicalDetails: TechnicalDetail[]; // 기술 구현 및 해결
+  achievements: string[]; // 결과 및 개선점
   tech: string[]; // 사용 기술
   screenshots?: string[]; // 스크린샷 경로 (public 폴더 기준)
 }

@@ -173,7 +173,7 @@ export const resumeData: ResumeData = {
       tech: ["TypeScript", "React", "Redux Toolkit"],
     },
     {
-      name: "루나소프트 광고 관리 어드민 신규 개발 및 마이그레이션",
+      name: "광고 관리 어드민 신규 개발 및 마이그레이션",
       company: "(주)루나소프트",
       period: "2020.10 - 2022.09",
       summary:

@@ -36,12 +36,14 @@ export function PortfolioProjects() {
                 ))}
               </div>
             </div>
-
             {/* 프로젝트 스크린샷 */}
             {project.screenshots && project.screenshots.length > 0 && (
               <div className="grid grid-cols-4 gap-2 mb-8">
                 {project.screenshots.map((screenshot, i) => (
-                  <div key={i} className="relative">
+                  <div
+                    key={`portfolio_project_screenshot_${i}`}
+                    className="relative"
+                  >
                     <div className="aspect-[9/16] overflow-hidden">
                       <Image
                         src={screenshot}
@@ -57,14 +59,13 @@ export function PortfolioProjects() {
                 ))}
               </div>
             )}
-
             {/* 업무 상세 */}
             <div className="mb-8">
               <h4 className="text-md font-bold mb-2">업무 상세</h4>
               <ul className="space-y-1">
                 {project.description.map((item, i) => (
                   <li
-                    key={i}
+                    key={`portfolio_project_description_${i}`}
                     className="flex items-start gap-2 text-[15px] text-muted-foreground  leading-relaxed"
                   >
                     <span className="text-slate-900 mt-0.5">•</span>
@@ -74,14 +75,66 @@ export function PortfolioProjects() {
               </ul>
             </div>
 
-            {/* 주요 성과 */}
+            {/* 문제 정의 */}
+            {project.issues && project.issues.length > 0 && (
+              <div className="mb-8">
+                <h4 className="text-md font-bold mb-2">문제 정의</h4>
+                <ul className="space-y-1">
+                  {project.issues.map((issue, i) => (
+                    <li
+                      key={`portfolio_project_issue_${i}`}
+                      className="flex items-start gap-2 text-[15px] leading-relaxed text-muted-foreground"
+                    >
+                      <span className="text-slate-900 mt-0.5">•</span>
+                      <span>{parseText(issue)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* 기술 구현 및 해결 */}
+            {project.technicalDetails &&
+              project.technicalDetails.length > 0 && (
+                <div className="mb-8">
+                  <h4 className="text-md font-bold mb-2">기술 구현 및 해결</h4>
+                  <ul className="space-y-1">
+                    {project.technicalDetails.map((detail, i) => (
+                      <li
+                        key={`portfolio_project_technicalDetail_${i}`}
+                        className="space-y-1"
+                      >
+                        <div className="flex items-start gap-2 text-[15px] font-medium text-muted-foreground leading-relaxed">
+                          <span className="text-slate-900 mt-0.5">•</span>
+                          <span>{detail.title}</span>
+                        </div>
+                        {detail.points && detail.points.length > 0 && (
+                          <ul className="space-y-1 ml-4">
+                            {detail.points.map((point, j) => (
+                              <li
+                                key={`portfolio_project_technicalDetail_sub_${j}`}
+                                className="flex items-start gap-2 text-[15px] text-muted-foreground leading-relaxed"
+                              >
+                                <span className="text-slate-900 mt-0.5">•</span>
+                                <span>{parseText(point)}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+            {/* 결과 및 개선점 */}
             {project.achievements && project.achievements.length > 0 && (
               <div className="mb-8">
-                <h4 className="text-md font-bold mb-2">주요 성과</h4>
+                <h4 className="text-md font-bold mb-2">결과 및 개선점</h4>
                 <ul className="space-y-1">
                   {project.achievements.map((achievement, i) => (
                     <li
-                      key={i}
+                      key={`portfolio_project_achievement_${i}`}
                       className="flex items-start gap-2 text-[15px] leading-relaxed text-muted-foreground "
                     >
                       <span className="text-slate-900 mt-0.5">•</span>
@@ -91,35 +144,6 @@ export function PortfolioProjects() {
                 </ul>
               </div>
             )}
-
-            {/* 기술 세부 사항 */}
-            {project.technicalDetails &&
-              project.technicalDetails.length > 0 && (
-                <div className="mb-8">
-                  <h4 className="text-md font-bold mb-2">기술 세부 사항</h4>
-                  <ul className="space-y-3">
-                    {project.technicalDetails.map((detail, i) => (
-                      <li key={i} className="space-y-1">
-                        <div className="flex items-start gap-2 text-[15px] font-medium text-muted-foreground  leading-relaxed">
-                          <span className="text-slate-900 mt-0.5">•</span>
-                          <span className="font-bold">{detail.title}</span>
-                        </div>
-                        <ul className="space-y-1 ml-4">
-                          {detail.points.map((point, j) => (
-                            <li
-                              key={j}
-                              className="flex items-start gap-2 text-[15px] text-muted-foreground  leading-relaxed"
-                            >
-                              <span className="text-slate-900 mt-0.5">•</span>
-                              <span>{parseText(point)}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
           </div>
         ))}
       </div>
