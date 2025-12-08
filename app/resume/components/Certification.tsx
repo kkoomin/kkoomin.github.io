@@ -47,7 +47,7 @@ export function Certification() {
                     <Calendar className="w-4 h-4" />
                     <span>{exp.period}</span>
                   </div>
-                  <ul>
+                  <ul className="mt-1">
                     {exp.description.map((desc, i) => (
                       <li
                         key={i}

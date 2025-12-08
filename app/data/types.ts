@@ -16,6 +16,7 @@ export interface SkillCategory {
 export interface ExperienceItem {
   title: string;
   company: string;
+  companyDescription?: string;
   location?: string;
   period: string;
   achievements: string[];
@@ -24,6 +25,7 @@ export interface ExperienceItem {
 export interface ProjectItem {
   name: string;
   description: string[];
+  summary?: string;
   tech: string[];
   period: string;
   company: string;
@@ -33,6 +35,7 @@ export interface EducationItem {
   degree: string;
   school: string;
   graduated: string;
+  others?: string[];
 }
 export interface CertificationItem {
   title: string;

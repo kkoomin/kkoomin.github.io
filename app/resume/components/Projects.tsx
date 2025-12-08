@@ -19,19 +19,25 @@ export function Projects() {
             key={`${index}_${Math.random()}`}
           >
             <div className="border border-border rounded-lg p-6 mb-6">
-              <div className="flex items-start justify-between mb-3">
+              {/* Project Title */}
+              <div className="flex items-start justify-between mb-1">
                 <h3 className="font-bold text-base">{project.name}</h3>
-                <div className="flex items-center gap-2 text-sm font-bold text-muted-foreground ">
+                <div className="flex items-center gap-2 text-sm font-bold text-muted-foreground">
                   {project.company}
                 </div>
               </div>
-              <div className="flex items-center justify-between mb-4 gap-4">
-                {project.period && (
-                  <div className="flex items-center gap-2 text-muted-foreground ">
-                    <Calendar className="w-4 h-4" />
-                    <span className="text-sm">{project.period}</span>
-                  </div>
+
+              {/* Project Summary */}
+              <div>
+                {project.summary && (
+                  <p className="text-sm text-muted-foreground">
+                    {parseText(project.summary)}
+                  </p>
                 )}
+              </div>
+
+              {/* Project Tech and Period */}
+              <div className="flex items-center justify-between mt-3 mb-4 gap-4">
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <Badge
@@ -43,8 +49,15 @@ export function Projects() {
                     </Badge>
                   ))}
                 </div>
+                {project.period && (
+                  <div className="flex items-center gap-2 text-muted-foreground ">
+                    <Calendar className="w-4 h-4" />
+                    <span className="text-sm">{project.period}</span>
+                  </div>
+                )}
               </div>
 
+              {/* Project Description */}
               <ul>
                 {project.description.map((desc, i) => (
                   <li

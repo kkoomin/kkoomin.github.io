@@ -19,12 +19,24 @@ export function Education() {
             </div>
             <div>
               <h3 className="mb-1 font-bold">{edu.school}</h3>
-              <p className="text-muted-foreground  text-[15px] mb-1">
+              <p className="text-muted-foreground text-[15px] mb-1">
                 {edu.degree}
               </p>
-              <p className="text-muted-foreground  text-[15px]">
+              <p className="text-muted-foreground text-[15px]">
                 {edu.graduated}
               </p>
+              <ul className="mt-1">
+                {edu.others &&
+                  edu.others.map((description, i) => (
+                    <li
+                      key={`${i}_${Math.random()}`}
+                      className="text-muted-foreground  text-[15px] leading-relaxed flex"
+                    >
+                      <span className="mr-2 text-primary">•</span>
+                      <span>{description}</span>
+                    </li>
+                  ))}
+              </ul>
             </div>
           </div>
         ))}

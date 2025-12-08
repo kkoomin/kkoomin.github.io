@@ -24,6 +24,9 @@ export function Experience() {
 
             <div className="mb-3">
               <h3 className="mb-1 font-bold text-base">{exp.company}</h3>
+              <div className="mb-1 text-sm text-muted-foreground ">
+                {exp.companyDescription}
+              </div>
               <div className="flex flex-wrap gap-x-4 gap-y-1 text-muted-foreground ">
                 <div className="flex items-center gap-2">
                   <SquareUserRound className="w-4 h-4" />

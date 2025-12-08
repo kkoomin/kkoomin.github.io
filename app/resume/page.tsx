@@ -23,7 +23,7 @@ export default function App() {
         <Certification />
 
         {/* 자기소개 합본용*/}
-        <Introduction />
+        {/* <Introduction /> */}
 
         {/* 상세 경력 기술서 합본용 */}
         {/* <DetailedProjects /> */}
