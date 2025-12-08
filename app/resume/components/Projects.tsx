@@ -16,7 +16,7 @@ export function Projects() {
         {projects.map((project, index) => (
           <div
             className="print:break-inside-avoid"
-            key={`${index}_${Math.random()}`}
+            key={`${project.name}-${project.period}-${index}`}
           >
             <div className="border border-border rounded-lg p-6 mb-6">
               {/* Project Title */}

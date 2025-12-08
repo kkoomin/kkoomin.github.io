@@ -29,7 +29,7 @@ export function Education() {
                 {edu.others &&
                   edu.others.map((description, i) => (
                     <li
-                      key={`${i}_${Math.random()}`}
+                      key={`${edu.school}-other-${i}`}
                       className="text-muted-foreground  text-[15px] leading-relaxed flex"
                     >
                       <span className="mr-2 text-primary">•</span>
