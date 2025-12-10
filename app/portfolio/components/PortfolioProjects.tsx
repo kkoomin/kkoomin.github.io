@@ -39,24 +39,33 @@ export function PortfolioProjects() {
             {/* 프로젝트 스크린샷 */}
             {project.screenshots && project.screenshots.length > 0 && (
               <div className="grid grid-cols-4 gap-2 mb-8">
-                {project.screenshots.map((screenshot, i) => (
-                  <div
-                    key={`portfolio_project_screenshot_${i}`}
-                    className="relative"
-                  >
-                    <div className="aspect-[9/16] overflow-hidden">
-                      <Image
-                        src={screenshot}
-                        alt={`${project.title} screenshot ${i + 1}`}
-                        fill
-                        className="object-contain"
-                      />
+                {project.screenshots.map((screenshot, i) => {
+                  // Priority for first 8 images (first 2 projects with 4 images each)
+                  const isPriority = index < 2 && i < 4;
+
+                  return (
+                    <div
+                      key={`portfolio_project_screenshot_${i}`}
+                      className="relative"
+                    >
+                      <div className="aspect-[9/16] overflow-hidden">
+                        <Image
+                          src={screenshot}
+                          alt={`${project.title} screenshot ${i + 1}`}
+                          fill
+                          className="object-contain"
+                          sizes="(max-width: 640px) 25vw, (max-width: 1024px) 25vw, 200px"
+                          quality={75}
+                          priority={isPriority}
+                          loading={isPriority ? undefined : "lazy"}
+                        />
+                      </div>
+                      <p className="text-xs text-center text-muted-foreground mt-1 leading-relaxed">
+                        스크린샷 {i + 1}
+                      </p>
                     </div>
-                    <p className="text-xs text-center text-muted-foreground mt-1 leading-relaxed">
-                      화면 {i + 1}
-                    </p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             )}
             {/* 업무 상세 */}
