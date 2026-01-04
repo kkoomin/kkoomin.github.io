@@ -66,10 +66,10 @@ export const resumeData: ResumeData = {
       location: "Seoul, South Korea",
       period: "2023.02 - 2024.05",
       achievements: [
-        "무신사 솔드아웃 APP 내 웹앱 영역 기능 고도화 및 운영 경험",
-        "상품 판매 · 결제 페이지를 Vue에서 Next.js로 마이그레이션 진행",
-        "중고 상품 거래 서비스 신규 개발 및 구조 리팩토링 개발",
-        "무신사 솔드아웃 PC 웹, 어드민 페이지의 기능 추가 및 운영",
+        "솔드아웃 APP 내 웹앱 영역 기능 고도화 및 운영 경험",
+        "솔드아웃 상품 판매하기, 결제하기 페이지 마이그레이션 (Vue → Next.js)",
+        "중고 상품 거래 서비스 신규 개발 및 코드 구조 리팩토링",
+        "솔드아웃 PC 웹, 백오피스 어드민 페이지의 기능 추가 및 운영",
       ],
     },
     {
@@ -81,7 +81,7 @@ export const resumeData: ResumeData = {
       achievements: [
         "글로벌 상담센터 TF 참여, 일본 시장 타겟 i18n 기반 구조 설계",
         "광고 관리 어드민 시스템 프론트엔드 신규 구축 및 개발",
-        "Vue · Angular 기반 코드를 React로 마이그레이션하며 성능 최적화",
+        "레거시 마케팅 솔루션 어드민을 React 기반으로 기능 통합 및 코드 리빌딩",
         "인스타그램 챗봇 빌더, 스마트 배송조회 서비스 등 커머스 연계 기능 개발 및 고도화",
       ],
     },
@@ -112,7 +112,7 @@ export const resumeData: ResumeData = {
       description: [
         "컴포넌트 렌더링 및 데이터 호출 로직 최적화로 코드 가독성과 성능 개선",
         "Zustand 스토어 구조 개편으로 도메인 분리, 상태 구조 단순화, 중복 데이터와 불필요한 훅 제거",
-        "react-hook-form을 사용하여 입력값 유효성 검증 로직을 표준화, 폼 개발 생산성 향상",
+        "react-hook-form을 사용하여 입력값 유효성 검증 로직을 정리, 폼 개발 생산성 향상",
         "판매완료 페이지 컴포넌트 구조를 Props 중심으로 코드 리팩토링",
       ],
       tech: ["TypeScript", "Next.js(v13)", "Zustand", "TanStack Query"],
@@ -127,7 +127,7 @@ export const resumeData: ResumeData = {
         "모호한 변수명을 사용하던 판매가 계산식 및 레거시 로직 정리로 코드 복잡도 감소",
         "TanStack Query를 활용한 서버 상태 관리 및 API 에러 핸들링 처리",
         "외부 라이브러리 없이 CSS 기반 커스텀 그래프 컴포넌트 구현, 패키지 번들 크기 감소",
-        "WebView에서 네이티브 바 영역과 충돌하는 UI 레이아웃 이슈 개선",
+        "WebView에서 네이티브 영역과 충돌하는 UI 레이아웃 이슈 개선",
       ],
       tech: ["TypeScript", "Next.js(v13)", "Zustand", "TanStack Query"],
     },
@@ -262,6 +262,12 @@ export const resumeData: ResumeData = {
     },
   ],
   otherExperiences: [
+    {
+      title: "아일랜드 워킹 홀리데이",
+      period: "2024.10 - 2025.01",
+      location: "Dublin, Ireland, London, United Kingdom",
+      description: ["ReactJS Girls 현지 Meetup 참여"],
+    },
     {
       title: "사내(솔드아웃) FE 스터디",
       period: "2023.07 - 2024.02",
