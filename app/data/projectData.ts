@@ -148,8 +148,7 @@ export const portfolioProjects: ProjectData[] = [
       },
     ],
     achievements: [
-      "고화질 이미지 로드 시 발생하던 초기 지연 문제를 안정화 → 앱 사용자 체감 성능 개선",
-      "특정 구간 진입 시점에서 이미지가 렌더링되도록 하여 불필요한 메모리 사용 감소",
+      "특정 구간 진입 시점에서 컴포넌트가 렌더링되도록 하여 불필요한 메모리 사용 감소",
       "WebView 전환 시 UI 오류 빈도 감소",
     ],
     tech: ["TypeScript", "Nuxt", "Vue.js"],

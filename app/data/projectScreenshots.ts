@@ -17,11 +17,7 @@ export const projectScreenshots = {
     "/assets/SLDT_sell_03.PNG",
     "/assets/SLDT_sell_04.PNG",
   ],
-  snap: [
-    "/assets/SLDT_snap_01.PNG",
-    "/assets/SLDT_snap_02.PNG",
-    "/assets/SLDT_snap_03.PNG",
-  ],
+  snap: ["/assets/SLDT_snap_01.PNG"],
 };
 
 export type ProjectScreenshots = typeof projectScreenshots;
