@@ -138,11 +138,6 @@ export const portfolioProjects: ProjectData[] = [
     technicalDetails: [
       {
         title:
-          "Next.js Image 컴포넌트 및 WebP 포맷 적용 → 이미지 초기 렌더링 지연 완화",
-        points: [],
-      },
-      {
-        title:
           "Intersection Observer API 활용 → 배너 노출 타이밍을 개선하고 불필요한 렌더링 최소화",
         points: [],
       },
