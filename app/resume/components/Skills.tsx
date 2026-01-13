@@ -5,7 +5,7 @@ export function Skills() {
   const skillCategories = resumeData.skills;
 
   return (
-    <section className="bg-white rounded-xl shadow-sm p-8 mb-6 print:mb-2 print:shadow-none print:rounded-none print:p-6 print-break-before-page">
+    <section className="bg-white rounded-xl shadow-sm p-8 mb-6 print:mb-2 print:shadow-none print:rounded-none print:p-6">
       <h2 className="text-lg mb-6 pb-2 border-b border-border font-bold">
         기술 스택
       </h2>
