@@ -16,15 +16,15 @@ export const portfolioProjects: ProjectData[] = [
       "중고상품 구매 결제 페이지 내 쿠폰 영역 추가",
     ],
     issues: [
-      "WebView 환경에서 onbeforeunload 이벤트가 예상대로 동작하지 않아 이탈 감지 실패 → 사용자 입력 데이터 손실 가능성 존재",
-      "페이지 간의 로직과 데이터 구조가 일치하지 않아 신규 기획 반영 시 로직 충돌 발생 → 기존 페이지 재사용 불가",
+      "WebView 환경에서 이탈 이벤트가 예상대로 동작하지 않아 유저 이탈 감지 어려움 → 사용자 입력 데이터 손실 가능성 존재",
+      "기존 데이터 구조가 확장성이 떨어져 신규 기획 반영 시 구조 변경 필요 → 기존 페이지 재사용성 부족",
       "기존 폼 로직은 유효성 검증과 렌더링 처리가 필드 단위로 분산되어 중복 코드가 많고 유지보수가 어려움",
       "스토어에 중복 · 미사용 데이터가 많아 상태 흐름과 로직이 불명확",
     ],
     technicalDetails: [
       {
         title:
-          "WebView에 대응하기 위해 커스텀 이탈 감지 훅 구현→ 네이티브 bridge 이벤트 기반 페이지 이탈 감지",
+          "기획 상의 커스텀 팝업 구현을 위해 이탈 이벤트 기반으로 동작하는 이탈 감지 기능 세팅",
         points: [],
       },
       {
@@ -36,7 +36,7 @@ export const portfolioProjects: ProjectData[] = [
       },
       {
         title:
-          "재사용이 어려운 기존 페이지 코드를 리팩토링하여 신규 기획에서 활용 가능한 모듈형 구조로 개선",
+          "재사용이 어려운 기존 페이지 코드를 리팩토링하여 추가 기획 반영 가능한 확장성있는 구조로 개선",
         points: [],
       },
       {
@@ -47,26 +47,27 @@ export const portfolioProjects: ProjectData[] = [
         ],
       },
       {
-        title: "Framer Motion 기반 커스텀 무한 스크롤 컴포넌트 제작",
+        title:
+          "React Hook Form 도입해 폼 상태 · 유효성 검증 로직 및 렌더링 성능 개선",
         points: [],
       },
       {
-        title: "React Hook Form 도입해 폼 상태 · 유효성 검증 로직 일원화",
+        title: "Framer Motion 기반 무한 스크롤 컴포넌트 제작",
         points: [],
       },
     ],
     achievements: [
       "WebView 환경에서도 이탈 감지가 안정적으로 수행되어 사용자 입력 데이터 보호 강화",
-      "폼 구조 일원화로 신규 필드 추가 시 검증 로직 재사용 및 유지보수 비용 감소",
       "상태 구조 단순화로 렌더링 빈도 감소 및 디버깅 효율성 상승",
+      "폼 구조 일원화로 신규 필드 추가 시 검증 로직 재사용 및 유지보수 비용 감소",
       "향후 기획 변경 및 고도화에 대응 가능한 확장성 있는 구조 확보",
     ],
     tech: [
-      "TypeScript",
-      "Next.js",
+      "Next.js(v13)",
       "Zustand",
       "TanStack Query",
       "React Hook Form",
+      "TypeScript",
     ],
     screenshots: projectScreenshots.secondhand,
   },
@@ -75,7 +76,7 @@ export const portfolioProjects: ProjectData[] = [
     company: "(주)에스엘디티",
     period: "2023.11 - 2024.01",
     description: [
-      "솔드아웃 주문 페이지 리빌딩 프로젝트 내 ‘판매하기’ 영역 Nuxt → Next.js 마이그레이션 담당",
+      "솔드아웃 주문 페이지 Nuxt → Next.js 마이그레이션 프로젝트 내 ‘판매하기’ 영역 담당",
       "제품 판매 시 즉시 판매 / 판매 입찰 분기에 따른 시나리오별 개발",
       "특정 제품의 판매 입찰 시 판매제안가 노출 및 금액별 판매 확률 그래프 기능 구현",
       "신규 ‘판매제안가’ 기능과 연동되는 어드민 관리 영역 개발",
@@ -84,7 +85,7 @@ export const portfolioProjects: ProjectData[] = [
     ],
     issues: [
       "Vue2 + Composition API로 구성된 레거시 구조 개선 필요",
-      "WebView safe-area 관련 UI 깨짐 문제 지속 발생",
+      "수동으로 관리되고 클라이언트와 분리되지 않던 서버 상태의 관리 필요",
     ],
     technicalDetails: [
       {
@@ -98,7 +99,7 @@ export const portfolioProjects: ProjectData[] = [
       {
         title: "TanStack Query로 서버 상태 관리 도입",
         points: [
-          "쿼리 키 구조 정의 → API 호출 최적화",
+          "쿼리 키 구조 정의 → Query Key Factory 활용",
           "staleTime / refetch 조건 설정 → API 호출 낭비 제거 & 응답 속도 개선",
         ],
       },
@@ -107,21 +108,13 @@ export const portfolioProjects: ProjectData[] = [
           "판매제안가 그래프를 CSS 기반 커스텀으로 구현해 코드 경량화 및 라이브러리 의존성 제거",
         points: [],
       },
-      {
-        title:
-          "WebView - 네이티브 충돌 문제 해결을 위해 동적 레이아웃 보정 로직 추가",
-        points: [
-          "초기 로드 시점의 높이 값을 hydration 단계에서 반영하도록 구조 변경",
-        ],
-      },
     ],
     achievements: [
-      "마이그레이션 후 페이지 구조가 단순해져 기능 확장 비용 감소, 렌더링/상태 변경 예측 가능성 향상",
-      "API 호출 중복 제거 → 네트워크 트래픽 절감 및 페이지 응답 속도 개선",
+      "마이그레이션 후 페이지 구조가 단순해져 기능 확장 비용 감소, 렌더링 / 상태 변경 예측 가능성 향상",
+      "API 중복 호출 제거 → 네트워크 트래픽 절감 및 페이지 응답 속도 개선",
       "외부 라이브러리 최소화 → 번들 크기 감소 및 유지보수성 향상",
-      "WebView 내 레이아웃 점프 현상 제거 → 앱 사용자 체감 품질 개선",
     ],
-    tech: ["TypeScript", "Next.js", "Zustand", "TanStack Query"],
+    tech: ["Next.js(v13)", "Zustand", "TanStack Query", "TypeScript"],
     screenshots: projectScreenshots.sell,
   },
   {
@@ -146,12 +139,18 @@ export const portfolioProjects: ProjectData[] = [
           "Modal 컴포넌트 ↔ WebView 화면 전환 시 상태 잔류 문제 해결 → 네이티브 영역과의 파라미터 구조 재정비",
         points: [],
       },
+      {
+        title:
+          "WebView - 네이티브 UI 문제 해결을 위해 동적 레이아웃 보정 로직 추가",
+        points: [],
+      },
     ],
     achievements: [
       "특정 구간 진입 시점에서 컴포넌트가 렌더링되도록 하여 불필요한 메모리 사용 감소",
       "WebView 전환 시 UI 오류 빈도 감소",
+      "WebView 내 레이아웃 점프 현상 제거 → 앱 사용자 체감 품질 개선",
     ],
-    tech: ["TypeScript", "Nuxt", "Vue.js"],
+    tech: ["Nuxt", "Vue.js", "TypeScript"],
     screenshots: projectScreenshots.snap,
   },
 
@@ -192,7 +191,7 @@ export const portfolioProjects: ProjectData[] = [
       "초기 개발 속도 및 유지보수 편의성 향상",
       "대규모 프로젝트 개발환경 표준화에 기여",
     ],
-    tech: ["TypeScript", "React", "Redux Toolkit", "Vite", "i18next"],
+    tech: ["React", "Redux Toolkit", "i18next", "TypeScript", "Vite"],
   },
   {
     title: "광고 관리 어드민 신규 개발 및 마이그레이션",
@@ -230,13 +229,13 @@ export const portfolioProjects: ProjectData[] = [
       "복잡한 비즈니스 로직을 React 구조로 안정적으로 재구성하여 유지보수성 개선",
     ],
     tech: [
-      "TypeScript",
       "React",
       "Redux Toolkit",
       "TanStack Query",
       "Angular",
       "RxJS",
       "Google Charts API",
+      "TypeScript",
     ],
   },
 ];

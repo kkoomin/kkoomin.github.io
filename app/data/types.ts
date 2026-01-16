@@ -56,6 +56,7 @@ export interface ResumeData {
   name_en: string; // 영문 이름
   role: string; // 역할
   contact: ContactInfo; // 연락처
+  currentPosition?: string; // 현재 포지션
   introduction: string[]; // 자기소개
   summary: string[]; // 핵심 역량
   skills: SkillCategory[]; // 기술 스택

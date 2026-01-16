@@ -13,6 +13,7 @@ export const resumeData: ResumeData = {
     website: "kkoomin.github.io",
     linkedin_en: "www.linkedin.com/in/minha-koo/?locale=en_US",
   },
+  // currentPosition: "프론트엔드 개발자",
   introduction: [
     "무신사 솔드아웃에서 **B2C 웹 · 앱 서비스를 개발하고 운영하며 이용자 중심의 문제 해결 경험**을 쌓았고, B2B 솔루션 기업 루나소프트에서는 광고, 마케팅 **어드민 신규 개발과 고도화**를 주도했습니다.",
     // "**게임 도메인에 대한 관심을 바탕으로 런던에서 게임 로컬라이제이션 QA 테스터로 근무**하며, 다양한 게임 타이틀의 UI와 UX를 검수한 경험이 있습니다",
@@ -26,7 +27,7 @@ export const resumeData: ResumeData = {
     "**이커머스 플랫폼 모바일 앱 · 웹앱 및 PC 웹** 신규 개발과 유지보수 경험",
     "**B2B 솔루션 서비스 어드민** 설계 및 운영",
     "Vue · Angular 기반 서비스 → **Next.js · React 기반으로 마이그레이션 경험**",
-    "**레거시 코드 개선 및 추상화, 성능 최적화** 경험",
+    "**레거시 코드 개선 및 리팩토링, 성능 최적화** 경험",
     "런던 현지 코딩 교육과정 수료, **글로벌 실무 환경 및 다국어 서비스(i18n) 대응 역량** 보유",
     "**AI 개발 툴을 활용**한 코드 생성 · 리팩토링 및 효율 개선 경험",
     "디자이너 · 기획자 등 **타 직군과의 협업을 통한 요구사항 정리 및 기술 커뮤니케이션 능숙**",
@@ -50,6 +51,7 @@ export const resumeData: ResumeData = {
       skills: [
         "TanStack Query",
         "Zustand",
+        "React Hook Form",
         "Vuex",
         "Redux Toolkit",
         "Tailwind CSS",
@@ -67,10 +69,10 @@ export const resumeData: ResumeData = {
       location: "Seoul, South Korea",
       period: "2023.02 - 2024.05",
       achievements: [
-        "솔드아웃 APP 내 웹앱 영역 기능 고도화 및 운영 경험",
-        "솔드아웃 상품 판매하기, 결제하기 페이지 마이그레이션 (Vue → Next.js)",
-        "중고 상품 거래 서비스 신규 개발 및 코드 구조 리팩토링",
-        "솔드아웃 PC 웹, 백오피스 어드민 페이지의 기능 추가 및 운영",
+        "솔드아웃 APP 내 WebView 영역 기능 개발 및 고도화",
+        "중고상품 거래 서비스 개발 및 리팩토링을 통한 코드 구조 개선",
+        "상품 판매하기, 결제하기 페이지 전체 마이그레이션 진행 (Vue → Next.js)",
+        "솔드아웃 PC 웹, 백오피스 어드민 페이지의 기능 추가 개발 및 운영",
       ],
     },
     {
@@ -82,8 +84,8 @@ export const resumeData: ResumeData = {
       achievements: [
         "글로벌 상담센터 TF 참여, 일본 시장 타겟 i18n 기반 구조 설계",
         "광고 관리 어드민 시스템 프론트엔드 신규 구축 및 개발",
-        "레거시 마케팅 솔루션 어드민을 React 기반으로 기능 통합 및 코드 리빌딩",
-        "인스타그램 챗봇 빌더, 스마트 배송조회 서비스 등 커머스 연계 기능 개발 및 고도화",
+        "마케팅 솔루션 레거시 어드민을 React 기반으로 시스템 통합 및 코드 리빌딩",
+        "인스타그램 챗봇 빌더, 스마트 배송조회 서비스 등 커머스 연계 서비스 개발 및 고도화",
       ],
     },
     {
@@ -109,28 +111,30 @@ export const resumeData: ResumeData = {
       name: "무신사 솔드아웃 APP 중고상품 거래 서비스 개발",
       company: "(주)에스엘디티",
       period: "2024.02 - 2024.03, 2023.08 - 2023.10",
-      summary: "중고상품 판매 등록하기 및 판매 완료 페이지 기능 개발 및 최적화",
+      summary:
+        "중고상품 판매 등록하기 및 판매 완료 관련 기능 개발 및 코드 최적화",
       description: [
+        "등록 폼 개발 시, React Hook Form을 사용하여 유효성 검증 로직 정리 및 생산성 개선",
+        "UX 개선을 위한 유저 이탈 시나리오 반영, 임시저장 기능과 이탈 시 커스텀 컨펌 팝업 개발",
         "컴포넌트 렌더링 및 데이터 호출 로직 최적화로 코드 가독성과 성능 개선",
-        "Zustand 스토어 구조 개편으로 도메인 분리, 상태 구조 단순화, 중복 데이터와 불필요한 훅 제거",
-        "react-hook-form을 사용하여 입력값 유효성 검증 로직을 정리, 폼 개발 생산성 향상",
+        "Zustand 스토어 구조 개편 → 도메인 분리, 구조 단순화, 중복 데이터와 불필요한 훅 제거",
         "판매완료 페이지 컴포넌트 구조를 Props 중심으로 코드 리팩토링",
       ],
-      tech: ["TypeScript", "Next.js(v13)", "Zustand", "TanStack Query"],
+      tech: ["Next.js(v13)", "Zustand", "TanStack Query", "React Hook Form"],
     },
     {
-      name: "판매 · 결제 페이지 개발 및 레거시 마이그레이션",
+      name: "판매하기 · 결제하기 페이지 레거시 코드 마이그레이션",
       company: "(주)에스엘디티",
       period: "2023.11 - 2024.01",
-      summary: "Nuxt · Vue2 기반의 판매 · 결제 페이지를 Next.js로 마이그레이션",
+      summary: "Nuxt · Vue2 기반의 주문 관련 페이지를 Next.js로 마이그레이션",
       description: [
         "기존 Nuxt 소스 코드의 로직을 분석하고 Next.js App Router 구조에 맞게 재설계",
-        "모호한 변수명을 사용하던 판매가 계산식 및 레거시 로직 정리로 코드 복잡도 감소",
-        "TanStack Query를 활용한 서버 상태 관리 및 API 에러 핸들링 처리",
+        "TanStack Query를 도입하여 서버 상태 분리 처리 및 관련 기능 개선",
+        "판매가 계산식 및 레거시 로직 정리로 코드 복잡도 감소",
         "외부 라이브러리 없이 CSS 기반 커스텀 그래프 컴포넌트 구현, 패키지 번들 크기 감소",
-        "WebView에서 네이티브 영역과 충돌하는 UI 레이아웃 이슈 개선",
+        "결제 관련 쿠폰 페이지 무한스크롤 기능 구현",
       ],
-      tech: ["TypeScript", "Next.js(v13)", "Zustand", "TanStack Query"],
+      tech: ["Next.js(v13)", "Zustand", "TanStack Query", "TypeScript"],
     },
     {
       name: "솔드아웃 APP 내 상품 상세 WebView 기능 고도화",
@@ -139,21 +143,25 @@ export const resumeData: ResumeData = {
       summary:
         "상품 상세페이지 내 스냅 컨텐츠 영역 신규 개발 및 기타 기능 개선",
       description: [
-        "Lazy Loading 및 Intersection Observer 활용으로 스크롤 이벤트 기반 배너 로딩 구현",
-        "WebView 영역과 APP 네이티브 영역 간의 연동 구조 개선",
+        "Intersection Observer 활용으로 스크롤 이벤트 기반 컴포넌트 로딩 구현",
+        "98점 상품 구매하기 내 쿠폰 사용 기능 개발",
+        "상품 상세 이미지 최적화 관련하여 WebP 포맷 적용 논의",
+        "WebView에서 네이티브 영역과 충돌하는 UI 레이아웃 이슈 개선",
+        "WebView 영역과 APP 네이티브 영역 간의 데이터 연동 구조 정비",
       ],
-      tech: ["TypeScript", "Nuxt", "Vue.js"],
+      tech: ["Nuxt", "Vue.js", "TypeScript"],
     },
     {
-      name: "무신사 솔드아웃 서비스 및 내부 어드민 운영 유지보수",
+      name: "기타 무신사 솔드아웃 서비스 개발 및 내부 어드민 유지보수",
       company: "(주)에스엘디티",
       period: "2023 - 2024",
-      summary: "이벤트 페이지 제작, 사내 어드민 운영 이슈 대응 및 기능 고도화",
+      summary: "사내 어드민 운영 이슈 대응 및 기능 고도화, 이벤트 페이지 제작",
       description: [
-        "외부 제휴 이벤트(넥슨플레이, 슈프라이즈 등) 페이지 제작",
+        "백오피스 어드민 기능 신규 추가 및 고도화 진행",
+        "넥슨플레이, 슈프라이즈 등 외부 제휴 이벤트 페이지 제작",
         "드롭, 블랙박스 등 기존 솔드아웃 서비스 기능 고도화 및 유지보수",
       ],
-      tech: ["TypeScript", "Next.js", "Nuxt", "Vue.js", "Vuex"],
+      tech: ["Next.js", "Nuxt", "Vue.js", "Vuex", "TypeScript"],
     },
 
     // ===============================
@@ -170,7 +178,7 @@ export const resumeData: ResumeData = {
         "권한 관리, 채널·브랜드 관리, 사업자 정보 관리 등 핵심 어드민 페이지 초기 버전 개발",
         "Vite 기반 개발 환경 구성으로 초기 빌드 속도 개선",
       ],
-      tech: ["TypeScript", "React", "Redux Toolkit"],
+      tech: ["React", "Redux Toolkit", "TypeScript"],
     },
     {
       name: "광고 관리 어드민 신규 개발 및 마이그레이션",
@@ -182,9 +190,9 @@ export const resumeData: ResumeData = {
         "팀 내 단독 프론트엔드 개발자로 신규 광고 어드민 전체 영역을 설계 · 구현 및 유지보수",
         "광고 채널 및 지면 관리, 관리자 권한 관리 등 핵심 워크플로우 UI, 로직 개발",
         "Google Charts API 기반 통계 대시보드 구축 (일별 현황, 그룹별 클릭/조회수, 채널별 통계)",
-        "Angular10 기반 초기 프로젝트를 React로 마이그레이션하며 사내 기술 스택 통합에 기여",
+        "Angular10 기반 초기 프로젝트를 React로 리빌딩하며 사내 기술 스택 통합에 기여",
       ],
-      tech: ["TypeScript", "React", "Redux Toolkit", "Angular", "RxJS"],
+      tech: ["React", "Redux Toolkit", "Angular", "RxJS", "TypeScript"],
     },
     {
       name: "리로드(Re:Load) - 이커머스 마케팅 솔루션 어드민 시스템 개편",
@@ -193,11 +201,11 @@ export const resumeData: ResumeData = {
       summary:
         "기존 레거시 어드민에 산재된 마케팅 솔루션 관리 기능 통합 시스템 개발",
       description: [
-        "분산되어 있던 관리 기능을 단일 어드민으로 통합해 운영 관리 동선 간소화",
+        "분산되어 있던 관리 기능을 단일 어드민으로 통합해 내부 운영 관리 프로세스 개선",
         "서비스 관리 · 배치관리 · 운영관리 등 페이지 신규 개발 및 UI 구조 설계",
         "페이지 전 영역 퍼블리싱 및 일관된 스타일 가이드(BEM) 적용",
       ],
-      tech: ["TypeScript", "React", "Redux Toolkit"],
+      tech: ["React", "Redux Toolkit", "TypeScript"],
     },
     {
       name: "인스타그램 챗봇 빌더(StarBuilder) 개발",
@@ -207,30 +215,20 @@ export const resumeData: ResumeData = {
         "인스타그램 협업 프로젝트 후반 추가 프론트엔드 인력으로 React 개발 지원",
       description: [
         "인스타그램 멘션 자동응답(Story Mention) 챗봇 페이지 기능 개발",
-        "인스타그램 챗봇 등록 및 수정을 위한 단계별 시나리오 빌더 UI를 개발",
-        "QA 건 처리 및 담당 페이지 외의 공통 컴포넌트 이슈 해결",
+        "인스타그램 챗봇 등록 및 수정을 위한 단계별 시나리오 빌더 UI 개발",
+        "QA 건 처리 및 담당 페이지 외 공통 컴포넌트 이슈 해결",
       ],
-      tech: ["TypeScript", "React"],
+      tech: ["React", "TypeScript"],
     },
     {
-      name: "스마트 배송조회 서비스 고도화",
+      name: "기타 루나소프트 서비스 운영 개발 및 고도화",
       company: "(주)루나소프트",
       period: "2020.09 - 2020.12",
+      summary: "",
       description: [
-        "스마트 배송조회 페이지 레이아웃 개편 작업",
-        "광고 어드민 배너 관련 ChannelAPI 연동 작업",
-        "카페24 알림톡 연동을 위한 API 별도 생성에 따른 프론트 기능 변경 작업",
-      ],
-      tech: ["Vue.js"],
-    },
-    {
-      name: "카카오 비즈메시지 관련 프로젝트 유지 보수",
-      company: "(주)루나소프트",
-      period: "2020.09 - 2020.10",
-      description: [
+        "스마트 배송조회 페이지 레이아웃 개편 및 ChannelAPI 연동 작업",
         "카카오 비즈메시지 템플릿 등록 및 발송 관련 QA 이슈 대응 및 개발 진행",
-        "Vue.js 기반 페이지 레이아웃 및 디자인 변경 퍼블리싱 작업",
-        "카카오 Biz Message 상담톡 API 국문 documentation을 영문으로 번역 작업 (2021.03)",
+        "카카오 Biz Message 상담톡 API 국문 documentation을 영문으로 번역 작업",
       ],
       tech: ["Vue.js"],
     },
@@ -242,8 +240,8 @@ export const resumeData: ResumeData = {
       graduated: "2019.04 수료",
       others: [
         "JavaScript, Ruby, React, Redux, Ruby on Rails, Sinatra, PostgreSQL",
-        "React, Ruby on Rails를 중심으로 한 풀스택 엔지니어링 과정 수료",
-        "Final Project: React Native로 음악 연습을 위한 악보 보기, 스케줄 관리 앱 개발",
+        "React, Ruby on Rails를 중심으로 한 Full Stack Engineering 과정 수료",
+        "Final Project - React Native, Expo 활용으로 연주자를 위한 악보 보기, 연습 일정 관리 앱 개발",
       ],
     },
     {
@@ -274,7 +272,7 @@ export const resumeData: ResumeData = {
       period: "2023.07 - 2024.02",
       location: "Seoul, South Korea",
       description: [
-        "주 1회 퇴근 후 스터디 진행, 현재 맡은 업무 내 이슈 사항과 해결방안 공유",
+        "주 1회 퇴근 후 스터디 진행, 코드 리뷰 및 현재 담당 업무 내 이슈 사항과 해결방안 공유",
         "새로 학습한 기술 스택이나 방법론에 대해 노션에 글을 쓰고 짧은 발표 형식으로 공유",
       ],
     },
@@ -293,8 +291,8 @@ export const resumeData: ResumeData = {
       location: "London, United Kingdom",
       description: [
         "게임 및 미디어 QA 솔루션 회사 Testronic에서 LQA Game Tester로 근무",
-        "Flatiron School London에서 Software Engineering course 수료",
-        "London Leceister Square LEGO Flagship Store에서 Sales Associate로 근무",
+        "Flatiron School London에서 Software Engineering 과정 수료",
+        "LEGO Flagship Store - London Leceister Square에서 Sales Associate로 근무",
       ],
     },
   ],
