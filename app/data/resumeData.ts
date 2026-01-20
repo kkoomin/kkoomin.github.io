@@ -213,6 +213,15 @@ export const resumeData: ResumeData = {
   ],
   education: [
     {
+      degree: "시큐어 코딩 기반 블록체인 개발 과정",
+      school: "삼성 멀티캠퍼스",
+      graduated: "2020.07 수료",
+      others: [
+        "React, Node.js, Express, Vue.js, MongoDB, MySQL",
+        "풀스택 개발 및 보안, 블록체인 기술을 활용한 서비스 개발 과정",
+      ],
+    },
+    {
       degree: "Software Engineering Course",
       school: "FlatIron School London",
       graduated: "2019.04 수료",
