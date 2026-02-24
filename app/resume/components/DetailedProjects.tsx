@@ -14,7 +14,9 @@ export function DetailedProjects() {
         {portfolioProjects.map((project, index) => (
           <div
             key={index}
-            className="pb-8 border-b border-border last:border-0"
+            className={`pb-8 border-b border-border last:border-0 print:break-inside-avoid ${
+              index !== 0 ? "print:pt-8" : ""
+            }`}
           >
             <div className="mb-6 print:mb-4">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-0 mb-2">
@@ -23,7 +25,7 @@ export function DetailedProjects() {
                   {project.period}
                 </span>
               </div>
-              <p className="text-[15px] text-muted-foreground print:text-slate-700 mb-3 leading-relaxed">
+              <p className="text-[15px] text-muted-foreground mb-3 leading-relaxed">
                 {project.company}
               </p>
 
@@ -42,7 +44,7 @@ export function DetailedProjects() {
 
             {/* 프로젝트 스크린샷 */}
             {project.screenshots && project.screenshots.length > 0 && (
-              <div className="grid grid-cols-4 gap-2 mb-6 print:mb-4">
+              <div className="grid grid-cols-5 gap-2 mb-6 print:mb-4">
                 {project.screenshots.map((screenshot, i) => (
                   <div key={i} className="relative">
                     <div className="aspect-[9/16] overflow-hidden">
@@ -53,7 +55,7 @@ export function DetailedProjects() {
                         className="object-contain"
                       />
                     </div>
-                    <p className="text-xs text-center text-muted-foreground print:text-slate-700 mt-1 leading-relaxed">
+                    <p className="text-xs text-center text-muted-foreground mt-1 leading-relaxed">
                       화면 {i + 1}
                     </p>
                   </div>
@@ -68,7 +70,7 @@ export function DetailedProjects() {
                 {project.description.map((item, i) => (
                   <li
                     key={i}
-                    className="text-muted-foreground print:text-slate-700 text-[15px] leading-relaxed flex"
+                    className="text-muted-foreground text-[15px] leading-relaxed flex"
                   >
                     <span className="mr-2 text-primary">•</span>
                     <span>{parseText(item)}</span>
@@ -85,7 +87,7 @@ export function DetailedProjects() {
                   {project.achievements.map((achievement, i) => (
                     <li
                       key={i}
-                      className="text-muted-foreground print:text-slate-700 text-[15px] leading-relaxed flex"
+                      className="text-muted-foreground text-[15px] leading-relaxed flex"
                     >
                       <span className="mr-2 text-primary">•</span>
                       <span>{parseText(achievement)}</span>
@@ -100,18 +102,18 @@ export function DetailedProjects() {
               project.technicalDetails.length > 0 && (
                 <div className="mb-6 print:mb-4">
                   <h4 className="text-md font-bold mb-2">기술 세부 사항</h4>
-                  <ul className="space-y-3">
+                  <ul className="space-y-1">
                     {project.technicalDetails.map((detail, i) => (
                       <li key={i} className="space-y-1">
-                        <div className="flex items-start gap-2 text-[15px] font-medium text-muted-foreground print:text-slate-700 leading-relaxed">
+                        <div className="flex items-start gap-2 text-[15px] text-muted-foreground leading-relaxed">
                           <span className="mr-2 text-primary">•</span>
-                          <span className="font-bold">{detail.title}</span>
+                          <span>{detail.title}</span>
                         </div>
-                        <ul className="space-y-1 ml-4">
+                        <ul className="ml-4 space-y-1">
                           {detail.points.map((point, j) => (
                             <li
                               key={j}
-                              className="text-muted-foreground print:text-slate-700 text-[15px] leading-relaxed flex"
+                              className="text-muted-foreground text-[15px] leading-relaxed flex"
                             >
                               <span className="mr-2 text-primary">•</span>
                               <span>{parseText(point)}</span>

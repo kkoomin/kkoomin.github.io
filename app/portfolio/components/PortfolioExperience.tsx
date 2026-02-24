@@ -13,7 +13,7 @@ export function PortfolioExperience() {
       <div className="space-y-3 text-[15px] leading-relaxed">
         {resumeData.experiences.map((exp, index) => (
           <div key={index}>
-            <div className="flex justify-between items-start gap-2">
+            <div className="flex flex-col sm:flex-row justify-between items-start gap-2">
               <div className="flex-1 min-w-0">
                 <p className="font-semibold text-slate-900 leading-relaxed">
                   {exp.company}

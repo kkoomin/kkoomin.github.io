@@ -47,7 +47,7 @@ export function Experience() {
             <ul>
               {exp.achievements.map((achievement, i) => (
                 <li
-                  key={`${i}_${Math.random()}`}
+                  key={`${exp.company}-achievement-${i}`}
                   className="text-muted-foreground  text-[15px] leading-relaxed flex"
                 >
                   <span className="mr-2 text-primary">•</span>

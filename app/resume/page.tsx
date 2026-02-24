@@ -1,5 +1,6 @@
 import { Header } from "./components/Header";
 import { Introduction } from "./components/Introduction";
+import { Position } from "./components/Position";
 import { Summary } from "./components/Summary";
 import { Experience } from "./components/Experience";
 import { Skills } from "./components/Skills";
@@ -13,8 +14,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 print:bg-white">
       <BackButton />
-      <div className="max-w-4xl mx-auto px-6 py-12 print:p-0 print:m-0">
+      <div className="max-w-4xl mx-auto px-6 py-16 print:p-0 print:m-0">
+        {/* <Position /> */}
         <Header />
+        {/* <Introduction /> */}
         <Summary />
         <Experience />
         <Skills />
@@ -22,10 +25,6 @@ export default function App() {
         <Education />
         <Certification />
 
-        {/* 자기소개 합본용*/}
-        {/* <Introduction /> */}
-
-        {/* 상세 경력 기술서 합본용 */}
         {/* <DetailedProjects /> */}
       </div>
     </div>

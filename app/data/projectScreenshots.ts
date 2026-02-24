@@ -3,12 +3,12 @@ export const projectScreenshots = {
   secondhand: [
     "/assets/SLDT_secondhand_01.PNG",
     "/assets/SLDT_secondhand_02.PNG",
-    "/assets/SLDT_secondhand_03.PNG",
+    // "/assets/SLDT_secondhand_03.PNG",
     "/assets/SLDT_secondhand_04.PNG",
     // "/assets/SLDT_secondhand_05.PNG",
-    "/assets/SLDT_secondhand_06.PNG",
-    "/assets/SLDT_secondhand_07.PNG",
-    "/assets/SLDT_secondhand_08.PNG",
+    // "/assets/SLDT_secondhand_06.PNG",
+    // "/assets/SLDT_secondhand_07.PNG",
+    // "/assets/SLDT_secondhand_08.PNG",
     "/assets/SLDT_secondhand_09.PNG",
   ],
   sell: [

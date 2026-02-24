@@ -20,7 +20,7 @@ export function Header() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
             <div className="flex items-center gap-2 text-muted-foreground ">
               <Mail className="w-4 h-4" />
               <span className="text-sm">{resumeData.contact.email}</span>
@@ -33,10 +33,10 @@ export function Header() {
               <Linkedin className="w-4 h-4" />
               <span className="text-sm">{resumeData.contact.linkedin}</span>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground ">
+            {/* <div className="flex items-center gap-2 text-muted-foreground ">
               <Globe className="w-4 h-4" />
               <span className="text-sm">{resumeData.contact.blog}</span>
-            </div>
+            </div> */}
             <div className="flex items-center gap-2 text-muted-foreground ">
               <Palette className="w-4 h-4" />
               <span className="text-sm">{resumeData.contact.website}</span>

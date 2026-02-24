@@ -16,7 +16,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
           <Link
             href="/resume"
-            className="px-8 py-4 w-48 bg-[#ff707a] text-white rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="px-8 py-4 w-48 bg-primary-brand text-white rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             <span className="font-bold">RESUME</span>
           </Link>

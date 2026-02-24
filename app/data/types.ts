@@ -58,6 +58,7 @@ export interface ResumeData {
   contact: ContactInfo; // 연락처
   currentPosition?: string; // 현재 포지션
   introduction: string[]; // 자기소개
+  detailedIntroduction?: string[]; // 상세 자기소개
   summary: string[]; // 핵심 역량
   skills: SkillCategory[]; // 기술 스택
   experiences: ExperienceItem[]; // 경력

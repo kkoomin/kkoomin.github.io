@@ -3,9 +3,10 @@ import { resumeData } from "@/app/data/resumeData";
 
 export function PortfolioHeader() {
   return (
-    <header className="mb-10 print:mb-15">
+    <header className="mb-10 print:mb-8">
       <div className="text-2xl font-bold text-slate-900 mb-8">
-        상세 경력 기술서
+        경력 기술서
+        {/* 자기소개서 */}
       </div>
       {/* Name and Role */}
       <div className="flex flex-col mb-5 gap-3">
@@ -23,7 +24,7 @@ export function PortfolioHeader() {
       </div>
 
       {/* Contact Info */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
         <div className="flex items-center gap-2 text-muted-foreground ">
           <Mail className="w-4 h-4" />
           <span className="text-sm">{resumeData.contact.email}</span>

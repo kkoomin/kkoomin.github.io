@@ -20,30 +20,29 @@ export function Certification() {
           <div>
             <ul className="space-y-1">
               {certifications.map((cert, index) => (
-                <div className="mb-4" key={index}>
+                <li className="mb-4 list-none" key={index}>
                   <h3 className="mb-1 font-bold">{cert.title}</h3>
                   <p className="text-muted-foreground  text-[15px]">
                     {cert.description}
                   </p>
-                </div>
+                </li>
               ))}
             </ul>
           </div>
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex gap-4 print:break-after-avoid">
           <div className="flex-shrink-0">
             <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center print:w-10 print:h-10">
               <CircleEllipsis className="w-6 h-6 text-primary print:w-5 print:h-5" />
             </div>
           </div>
-          <div>
-            <h3 className="text-lg mb-2 hidden">기타 이력</h3>
+          <div className="print:break-after-avoid">
             <ul className="space-y-1">
               {otherExperiences.map((exp, index) => (
-                <div className="mb-4" key={index}>
+                <li className="mb-4 list-none" key={index}>
                   <h3 className="mb-1 font-bold">{exp.title}</h3>
-                  <div className="flex items-center gap-2 text-muted-foreground  text-[15px]">
+                  <div className="flex items-center gap-2 text-muted-foreground text-[15px]">
                     <Calendar className="w-4 h-4" />
                     <span>{exp.period}</span>
                   </div>
@@ -58,7 +57,7 @@ export function Certification() {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </li>
               ))}
             </ul>
           </div>

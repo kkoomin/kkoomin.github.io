@@ -12,6 +12,7 @@
 
 :root {
   --font-size: 16px;
+  --primary-brand: #ff707a;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -89,6 +90,7 @@
 }
 
 @theme inline {
+  --color-primary-brand: var(--primary-brand);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -228,7 +230,8 @@ body {
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid currentColor;
-  animation: typing 2.8s steps(9, end) forwards,
+  animation:
+    typing 2.8s steps(9, end) forwards,
     blink-cursor 0.8s step-end 3.2s infinite;
   width: 0;
 }
